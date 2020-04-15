@@ -1,3 +1,20 @@
+## How to find an executable entry point
+
+1. launch gdb and load the executable:
+	_gdb {executable}_
+2. get file info and look for `Entry point: ...`
+	_info file_
+3. set a breakpoint at the address obtained from the previous point
+	_break *{address}_
+
+OR _readelf -e {executable path}_ and look for the virtual address of the **.text** section.
+	This section contains the code of the program (debug-only? machine code if there are not debug info?)
+
+**WARNING:** this does not work if the executable is a shared library, the ntry point describes the offset
+	at which the code should be located after establishing a base address (ASLR)
+
+---
+
 debugging dei comandi all'interno di vuos -> **vudebug +s [-- cmd [args]]**
 	+s mostra tutte le sc nella console da cui si è lanciato umvu
 in _vuos/cmd_ ci sono i comandi che possono essere lanciati all'interno di VUOS come vusu, vumount ecc.
