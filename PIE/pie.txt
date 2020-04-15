@@ -1,0 +1,5 @@
+So question: https://stackoverflow.com/questions/59074126/loading-executable-or-executing-a-library
+Problem source: https://patchwork.ozlabs.org/patch/1055380/
+Proposed workaround (not tested): http://rachid.koucha.free.fr/tech_corner/executable_lib.html
+How it used to work: https://github.com/eklitzke/symtab
+Note on shared libraries: http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html

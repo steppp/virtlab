@@ -1,0 +1,1 @@
+qemu-system-x86_64 -cdrom ~/Downloads/bionicpup64-8.0-uefi.iso -boot d -smp 2 -nic vde,sock=/tmp/mysw,mac=52:54:00:12:34:58

@@ -1,0 +1,2 @@
+http://optumsoft.com/dangers-of-using-dlsym-with-rtld_next/
+https://blog.container-solutions.com/linux-capabilities-in-practice
