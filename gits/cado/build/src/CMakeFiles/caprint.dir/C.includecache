@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stefano/Documents/virtlab/gits/cado/src/caprint.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+stdint.h
+-
+getopt.h
+-
+libgen.h
+-
+sys/capability.h
+-
+inttypes.h
+-
+

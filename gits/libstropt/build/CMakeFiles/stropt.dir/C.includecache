@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../stropt.h
+
+/home/stefano/Documents/virtlab/gits/libstropt/stropt.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+stropt.h
+-
+

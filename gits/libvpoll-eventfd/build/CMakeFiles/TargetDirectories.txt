@@ -1,0 +1,14 @@
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/CMakeFiles/vpoll.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/man/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/man/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/man/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/man/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/man/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/man/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/build/man/CMakeFiles/vpoll_manpages.dir

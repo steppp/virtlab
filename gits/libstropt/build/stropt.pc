@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix="${prefix}/bin"
+libdir="${prefix}/lib"
+includedir="${prefix}/include"
+
+Name: stropt
+Description: Parse options from a string (it supports quotation, option arguments)
+Version: 0.0.1
+
+Requires: 
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -lstropt 

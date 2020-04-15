@@ -1,0 +1,2 @@
+/usr/local/lib/vdeplug/libvdeplug_slirp.so
+/usr/local/share/man/man1/libvdeplug_slirp.1

@@ -1,0 +1,1 @@
+/usr/bin/cc  -D_FORTIFY_SOURCE=2 -O2 -pedantic -Wall -Wextra   CMakeFiles/userbindmount.dir/userbindmount.c.o  -o userbindmount  -Wl,-rpath,/home/stefano/Documents/virtlab/gits/userbindmount/build: libuserbindmount.so.0.0.1 -lcap 

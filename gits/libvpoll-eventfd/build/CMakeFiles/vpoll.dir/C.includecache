@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../vpoll.h
+stdint.h
+-
+
+/home/stefano/Documents/virtlab/gits/libvpoll-eventfd/vpoll.c
+stdio.h
+-
+fcntl.h
+-
+unistd.h
+-
+stdint.h
+-
+errno.h
+-
+sys/socket.h
+-
+sys/epoll.h
+-
+sys/eventfd.h
+-
+sys/ioctl.h
+-
+vpoll.h
+-
+fduserdata.h
+-
+

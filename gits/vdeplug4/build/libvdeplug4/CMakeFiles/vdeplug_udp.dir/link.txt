@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic  -shared -Wl,-soname,libvdeplug_udp.so -o libvdeplug_udp.so CMakeFiles/vdeplug_udp.dir/libvdeplug_udp.c.o  -Wl,-rpath,/home/stefano/Documents/virtlab/gits/vdeplug4/build/libvdeplug4: libvdeplug_mod.so.4.0.0 -ldl -export-dynamic 

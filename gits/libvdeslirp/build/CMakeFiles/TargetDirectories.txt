@@ -1,0 +1,15 @@
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/uninstall.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/vdeslirp.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/man/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/man/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/man/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/man/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/man/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/man/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/man/CMakeFiles/vdeslirp_manpages.dir

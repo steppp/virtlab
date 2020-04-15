@@ -1,0 +1,2 @@
+/usr/bin/ar qc libuserbindmount.a  CMakeFiles/libuserbindmount-static.dir/libuserbindmount.c.o
+/usr/bin/ranlib libuserbindmount.a

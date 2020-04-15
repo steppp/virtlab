@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -D_FORTIFY_SOURCE=2 -O2 -pedantic -Wall -Wextra  -shared -Wl,-soname,libvdestack.so.0 -o libvdestack.so.0.1.0 CMakeFiles/vdestack.dir/vdestack.c.o  -lcap -lexecs -lvdeplug 

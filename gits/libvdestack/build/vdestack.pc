@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix="${prefix}/bin"
+libdir="${prefix}/lib"
+includedir="${prefix}/include"
+
+Name: vdestack
+Description: A network namespace as a library, i.e. Internet of Threads through Network Namespaces.
+Version: 0.1.0
+
+Requires: vdeplug cap execs
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -lvdestack 

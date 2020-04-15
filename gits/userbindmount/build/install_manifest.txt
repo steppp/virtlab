@@ -1,0 +1,14 @@
+/usr/local/lib/libuserbindmount.so.0.0.1
+/usr/local/lib/libuserbindmount.so.0
+/usr/local/lib/libuserbindmount.so
+/usr/local/lib/libuserbindmount.a
+/usr/local/include/userbindmount.h
+/usr/local/lib/pkgconfig/userbindmount.pc
+/usr/local/bin/userbindmount
+/usr/local/share/man/man1/userbindmount.1
+/usr/local/share/man/man3/userbindmount.3
+/usr/local/share/man/man3/userbindmount_data.3
+/usr/local/share/man/man3/userbindmount_fd.3
+/usr/local/share/man/man3/userbindmount_set_cap_sysadm.3
+/usr/local/share/man/man3/userbindmount_string.3
+/usr/local/share/man/man3/userbindmount_unshare.3

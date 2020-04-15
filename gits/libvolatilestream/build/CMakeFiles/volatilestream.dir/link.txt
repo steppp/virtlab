@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic  -shared -Wl,-soname,libvolatilestream.so.0 -o lib/libvolatilestream.so.0.0.1 CMakeFiles/volatilestream.dir/volatilestream.c.o 

@@ -1,0 +1,70 @@
+Determining if the slirp_add_unix exist failed with the following output:
+Change Dir: /home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_59f5b/fast && /usr/bin/make -f CMakeFiles/cmTC_59f5b.dir/build.make CMakeFiles/cmTC_59f5b.dir/build
+make[1]: Entering directory '/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59f5b.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -D_FORTIFY_SOURCE=2 -O2 -pedantic -Wall -Wextra    -o CMakeFiles/cmTC_59f5b.dir/CheckSymbolExists.c.o   -c /home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘slirp_add_unix’ undeclared (first use in this function); did you mean ‘slirp_add_exec’?
+    8 |   return ((int*)(&slirp_add_unix))[argc];
+      |                   ^~~~~~~~~~~~~~
+      |                   slirp_add_exec
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:4:14: warning: parameter ‘argc’ set but not used [-Wunused-but-set-parameter]
+    4 | int main(int argc, char** argv)
+      |          ~~~~^~~~
+make[1]: *** [CMakeFiles/cmTC_59f5b.dir/build.make:66: CMakeFiles/cmTC_59f5b.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_59f5b/fast] Error 2
+
+
+File /home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <slirp/libslirp.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef slirp_add_unix
+  return ((int*)(&slirp_add_unix))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the slirp_remove_guestfwd exist failed with the following output:
+Change Dir: /home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a1165/fast && /usr/bin/make -f CMakeFiles/cmTC_a1165.dir/build.make CMakeFiles/cmTC_a1165.dir/build
+make[1]: Entering directory '/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a1165.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -D_FORTIFY_SOURCE=2 -O2 -pedantic -Wall -Wextra    -o CMakeFiles/cmTC_a1165.dir/CheckSymbolExists.c.o   -c /home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘slirp_remove_guestfwd’ undeclared (first use in this function); did you mean ‘slirp_remove_hostfwd’?
+    8 |   return ((int*)(&slirp_remove_guestfwd))[argc];
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+      |                   slirp_remove_hostfwd
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:4:14: warning: parameter ‘argc’ set but not used [-Wunused-but-set-parameter]
+    4 | int main(int argc, char** argv)
+      |          ~~~~^~~~
+make[1]: *** [CMakeFiles/cmTC_a1165.dir/build.make:66: CMakeFiles/cmTC_a1165.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a1165/fast] Error 2
+
+
+File /home/stefano/Documents/virtlab/gits/libvdeslirp/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <slirp/libslirp.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef slirp_remove_guestfwd
+  return ((int*)(&slirp_remove_guestfwd))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/vulib.h
+unistd.h
+-
+sys/utsname.h
+-
+
+/home/stefano/Documents/virtlab/gits/vuos/cmd/vusu.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+getopt.h
+-
+pwd.h
+-
+grp.h
+-
+string.h
+-
+libgen.h
+-
+vulib.h
+-
+

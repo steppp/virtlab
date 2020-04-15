@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-unused-parameter -D_FILE_OFFSET_BITS=64  -shared -Wl,-soname,vufusereal.so -o ../lib/vufusereal.so CMakeFiles/vufusereal.dir/vufusereal.c.o 

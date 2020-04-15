@@ -1,0 +1,7 @@
+/home/stefano/Documents/virtlab/gits/libnlq/build/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libnlq/build/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libnlq/build/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libnlq/build/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libnlq/build/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libnlq/build/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libnlq/build/CMakeFiles/nlq.dir

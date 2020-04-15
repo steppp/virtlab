@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic -O2 -D_FORTIFY_SOURCE=2  -shared -Wl,-soname,libvpoll.so.0 -o lib/libvpoll.so.0.0.1 CMakeFiles/vpoll.dir/vpoll.c.o  -lfduserdata 

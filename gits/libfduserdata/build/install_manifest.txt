@@ -1,0 +1,13 @@
+/usr/local/lib/libfduserdata.so.0.0.1
+/usr/local/lib/libfduserdata.so.0
+/usr/local/lib/libfduserdata.so
+/usr/local/include/fduserdata.h
+/usr/local/lib/pkgconfig/fduserdata.pc
+/usr/local/share/man/man3/fduserdata.3
+/usr/local/share/man/man3/fduserdata_create.3
+/usr/local/share/man/man3/fduserdata_del.3
+/usr/local/share/man/man3/fduserdata_destroy.3
+/usr/local/share/man/man3/fduserdata_destroy_cb.3
+/usr/local/share/man/man3/fduserdata_get.3
+/usr/local/share/man/man3/fduserdata_new.3
+/usr/local/share/man/man3/fduserdata_put.3

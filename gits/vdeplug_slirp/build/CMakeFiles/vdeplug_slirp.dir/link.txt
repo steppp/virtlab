@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libvdeplug_slirp.so -o libvdeplug_slirp.so CMakeFiles/vdeplug_slirp.dir/libvdeplug_slirp.c.o  -lvdeslirp -lvdeplug_mod 

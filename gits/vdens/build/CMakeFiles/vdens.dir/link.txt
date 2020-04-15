@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/vdens.dir/vdens.c.o  -o vdens  -lcap -lexecs -lvdeplug 

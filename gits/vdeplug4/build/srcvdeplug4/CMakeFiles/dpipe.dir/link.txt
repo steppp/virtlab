@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -pedantic   CMakeFiles/dpipe.dir/dpipe.c.o CMakeFiles/dpipe.dir/openclosepidfile.c.o CMakeFiles/dpipe.dir/selfsighandler.c.o  -o dpipe 

@@ -1,0 +1,1 @@
+/usr/bin/cc -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-unused-parameter  -rdynamic CMakeFiles/vusu.dir/vusu.c.o  -o ../bin/vusu 

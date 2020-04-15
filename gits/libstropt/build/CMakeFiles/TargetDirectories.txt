@@ -1,0 +1,14 @@
+/home/stefano/Documents/virtlab/gits/libstropt/build/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/CMakeFiles/stropt.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/man/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/man/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/man/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/man/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/man/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/man/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libstropt/build/man/CMakeFiles/stropt_manpages.dir

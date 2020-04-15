@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libnlq.so.0 -o libnlq.so.0.0.1 CMakeFiles/nlq.dir/nlq.c.o CMakeFiles/nlq.dir/nlq_process_msg.c.o CMakeFiles/nlq.dir/nlq_client.c.o CMakeFiles/nlq.dir/nlq_ioctl.c.o CMakeFiles/nlq.dir/nlq_proc.c.o 

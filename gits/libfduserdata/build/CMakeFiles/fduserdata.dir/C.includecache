@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../fduserdata.h
+
+/home/stefano/Documents/virtlab/gits/libfduserdata/fduserdata.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+errno.h
+-
+stddef.h
+-
+pthread.h
+-
+fduserdata.h
+-
+

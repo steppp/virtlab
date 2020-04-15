@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-unused-parameter  -shared -Wl,-soname,vufs.so -o vufs.so CMakeFiles/vufs.dir/vufs.c.o CMakeFiles/vufs.dir/vufs_getdents.c.o CMakeFiles/vufs.dir/vufs_path.c.o CMakeFiles/vufs.dir/vufsa.c.o CMakeFiles/vufs.dir/vufsops.c.o CMakeFiles/vufs.dir/vufstat.c.o  -lstropt -lvolatilestream 

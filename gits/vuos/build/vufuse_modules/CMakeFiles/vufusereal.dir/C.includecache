@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stefano/Documents/virtlab/gits/vuos/vufuse_modules/vufusereal.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdarg.h
+-
+getopt.h
+-
+assert.h
+-
+dirent.h
+-
+errno.h
+-
+fuse.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+sys/xattr.h
+-
+fcntl.h
+-
+sys/statvfs.h
+-
+dirent.h
+-
+limits.h
+-
+

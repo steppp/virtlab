@@ -1,0 +1,15 @@
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/uninstall.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/CMakeFiles/vdeplug_slirp.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/man/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/man/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/man/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/man/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/man/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/man/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/vdeplug_slirp/build/man/CMakeFiles/vdeplug_slirp_manpages.dir

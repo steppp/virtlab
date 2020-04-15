@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix="${prefix}/bin"
+libdir="${prefix}/lib"
+includedir="${prefix}/include"
+
+Name: vpoll
+Description: generate synthetic events for poll/select/ppoll/pselect/epoll
+Version: 0.0.1
+
+Requires: fduserdata
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -lvpoll 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvdeplug.a  CMakeFiles/libvdeplug_a.dir/libvdeplug.c.o
+/usr/bin/ranlib libvdeplug.a

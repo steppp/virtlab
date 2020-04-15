@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic  -shared -Wl,-soname,libvdeplug.so.2 -o libvdeplug.so.4.0.0 CMakeFiles/vdeplug.dir/libvdeplug.c.o CMakeFiles/vdeplug.dir/libvdestream.c.o  -ldl -export-dynamic 

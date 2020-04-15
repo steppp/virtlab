@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic  -shared -Wl,-soname,libstropt.so.0 -o lib/libstropt.so.0.0.1 CMakeFiles/stropt.dir/stropt.c.o 

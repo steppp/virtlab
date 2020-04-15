@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-incompatible-pointer-types -Wno-unused-parameter  -shared -Wl,-soname,libpurelibc.so.1 -o libpurelibc.so.1.0.2 CMakeFiles/purelibc.dir/dir.c.o CMakeFiles/purelibc.dir/exec.c.o CMakeFiles/purelibc.dir/socketcalls.c.o CMakeFiles/purelibc.dir/stdio.c.o CMakeFiles/purelibc.dir/syscalls.c.o  -ldl 

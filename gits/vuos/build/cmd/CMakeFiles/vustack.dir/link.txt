@@ -1,0 +1,1 @@
+/usr/bin/cc -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-unused-parameter  -rdynamic CMakeFiles/vustack.dir/vustack.c.o  -o ../bin/vustack  -lstropt 

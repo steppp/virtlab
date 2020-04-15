@@ -1,0 +1,4 @@
+/usr/local/lib/libnlq.so.0.0.1
+/usr/local/lib/libnlq.so.0
+/usr/local/lib/libnlq.so
+/usr/local/include/libnlq.h

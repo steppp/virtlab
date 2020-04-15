@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/libvdeplug.h
+sys/types.h
+-
+
+/home/stefano/Documents/virtlab/gits/vdeplug4/libvdeplug4_static/libvdeplug.c
+errno.h
+-
+stdio.h
+-
+stdlib.h
+-
+fcntl.h
+-
+string.h
+-
+unistd.h
+-
+limits.h
+-
+sched.h
+-
+pwd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+libvdeplug.h
+-
+

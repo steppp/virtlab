@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix="${prefix}/bin"
+libdir="${prefix}/lib"
+includedir="${prefix}/include"
+
+Name: fduserdata
+Description: associate file descriptors with user defined data
+Version: 0.0.1
+
+Requires: 
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -lfduserdata 

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic  -shared -Wl,-soname,libvdeplug_hub.so -o libvdeplug_hub.so CMakeFiles/vdeplug_hub.dir/libvdeplug_hub.c.o CMakeFiles/vdeplug_hub.dir/libvdeplug_netnode.c.o  -Wl,-rpath,/home/stefano/Documents/virtlab/gits/vdeplug4/build/libvdeplug4: libvdeplug_mod.so.4.0.0 -ldl -export-dynamic 

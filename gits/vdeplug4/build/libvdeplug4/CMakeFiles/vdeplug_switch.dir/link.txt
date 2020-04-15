@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic  -shared -Wl,-soname,libvdeplug_switch.so -o libvdeplug_switch.so CMakeFiles/vdeplug_switch.dir/libvdeplug_switch.c.o CMakeFiles/vdeplug_switch.dir/libvdeplug_netnode.c.o  -Wl,-rpath,/home/stefano/Documents/virtlab/gits/vdeplug4/build/libvdeplug4: libvdeplug_mod.so.4.0.0 -ldl -export-dynamic 

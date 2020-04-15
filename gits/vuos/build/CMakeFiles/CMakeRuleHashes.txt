@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+2f163b6ff0a622a1bd1b9ef2d9c1c4d6 include
+fa4e30b5b7565e87c506c217d0c9273b include/r_table.h
+04d2b8bf7c8c500f6f353914901c4be2 include/syscall_defs.h
+12d7ae43d38f37d5834a5fcd89a4ec05 man/CMakeFiles/vuos_manpages
+53bf8f1d67b0f1321614d8cc12849388 scripts/CMakeFiles/Dynamic_Sources
+294725f76c4a3a1d7eed4d70f44a7e92 umvu_dynsrc
+329da4c063c28bcd94f52fc5a3dc6421 umvu_dynsrc/arch_table.c
+e6bbcb7fa0fa7a91a126e8891c8f53b9 umvu_dynsrc/syscall_names.c
+75f5c58afcf2c976bc8666067f130a7e umvu_dynsrc/syscall_table.c

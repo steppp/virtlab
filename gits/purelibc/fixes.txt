@@ -1,0 +1,12 @@
+in purelibc:
+	in dir.c:106:5: error: conflicting types for 'getdents64'
+	starting from glibc v2.31 getdents64 is defined as
+		ssize_t __getdents64 (int fd, void *buf, size_t nbytes)
+	FIX: replace the function's signature in dir.c
+	WARNING: almost certainly this breaks compatibility with other OSes
+
+	in syscall.c:902:5: error: conflicting types for 'gettimeofday'
+	in the current environment (kernel v5.5.7-arch1-1) 'gettimeofday' has a different signature, probably
+		because of glibc as previously
+	FIX: replace the function's signature in syscalls.c
+	WARNING: almost certainly this breaks compatibility with other OSes

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stefano/Documents/virtlab/gits/userbindmount/libuserbindmount.c
+stdio.h
+-
+fcntl.h
+-
+stdlib.h
+-
+unistd.h
+-
+sched.h
+-
+limits.h
+-
+errno.h
+-
+string.h
+-
+sys/wait.h
+-
+sys/stat.h
+-
+sys/mount.h
+-
+sys/capability.h
+-
+sys/prctl.h
+-
+userbindmount.h
+/home/stefano/Documents/virtlab/gits/userbindmount/userbindmount.h
+
+/home/stefano/Documents/virtlab/gits/userbindmount/userbindmount.h
+sys/types.h
+-
+

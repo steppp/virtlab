@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-unused-parameter  -shared -Wl,-soname,vubinfmt.so -o vubinfmt.so CMakeFiles/vubinfmt.dir/vubinfmt.c.o  -Wl,-rpath,/home/stefano/Documents/virtlab/gits/vuos/build/lib: -lstropt ../lib/libvumod.so.0.0.1 

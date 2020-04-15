@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -D_FORTIFY_SOURCE=2 -O2 -pedantic -Wall -Wextra  -shared -Wl,-soname,libvdeslirp.so.0 -o libvdeslirp.so.0.1.0 CMakeFiles/vdeslirp.dir/libvdeslirp.c.o  -lslirp -lpthread 

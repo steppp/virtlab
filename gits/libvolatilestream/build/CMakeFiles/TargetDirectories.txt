@@ -1,0 +1,14 @@
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/CMakeFiles/volatilestream.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/man/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/man/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/man/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/man/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/man/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/man/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/libvolatilestream/build/man/CMakeFiles/volatilestream_manpages.dir

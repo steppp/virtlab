@@ -1,0 +1,6 @@
+/usr/local/lib/libvolatilestream.so.0.0.1
+/usr/local/lib/libvolatilestream.so.0
+/usr/local/lib/libvolatilestream.so
+/usr/local/include/volatilestream.h
+/usr/local/lib/pkgconfig/volatilestream.pc
+/usr/local/share/man/man3/volstream_open.3

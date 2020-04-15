@@ -1,0 +1,4 @@
+/usr/local/lib/libpurelibc.so.1.0.2
+/usr/local/lib/libpurelibc.so.1
+/usr/local/lib/libpurelibc.so
+/usr/local/include/purelibc.h

@@ -1,0 +1,9 @@
+/usr/local/lib/libstropt.so.0.0.1
+/usr/local/lib/libstropt.so.0
+/usr/local/lib/libstropt.so
+/usr/local/include/stropt.h
+/usr/local/lib/pkgconfig/stropt.pc
+/usr/local/share/man/man3/stropt.3
+/usr/local/share/man/man3/stropt2buf.3
+/usr/local/share/man/man3/stropt2str.3
+/usr/local/share/man/man3/stroptx.3

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../volatilestream.h
+stdio.h
+-
+
+/home/stefano/Documents/virtlab/gits/libvolatilestream/volatilestream.c
+stdio.h
+-
+errno.h
+-
+stdlib.h
+-
+string.h
+-
+volatilestream.h
+-
+

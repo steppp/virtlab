@@ -1,0 +1,5 @@
+/* default editor */
+#cmakedefine EDITOR "/usr/bin/vi"
+
+/* SPOOL Directory for scado */
+#cmakedefine CADO_SPOOL_DIR "@CADO_SPOOL_DIR@"

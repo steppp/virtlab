@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-unused-parameter  -shared -Wl,-soname,netlinkdump.so -o ../lib/netlinkdump.so CMakeFiles/netlinkdump.dir/netlinkdump.c.o 

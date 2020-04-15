@@ -1,0 +1,11 @@
+/usr/local/include/nlinline.h
+/usr/local/include/nlinline+.h
+/usr/local/share/man/man3/nlinline.3
+/usr/local/share/man/man3/nlinline_if_nametoindex.3
+/usr/local/share/man/man3/nlinline_ipaddr_add.3
+/usr/local/share/man/man3/nlinline_ipaddr_del.3
+/usr/local/share/man/man3/nlinline_iplink_add.3
+/usr/local/share/man/man3/nlinline_iplink_del.3
+/usr/local/share/man/man3/nlinline_iproute_add.3
+/usr/local/share/man/man3/nlinline_iproute_del.3
+/usr/local/share/man/man3/nlinline_linksetupdown.3

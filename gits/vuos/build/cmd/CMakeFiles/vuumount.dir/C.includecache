@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stefano/Documents/virtlab/gits/vuos/cmd/vuumount.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+getopt.h
+-
+sys/mount.h
+-
+stropt.h
+-
+

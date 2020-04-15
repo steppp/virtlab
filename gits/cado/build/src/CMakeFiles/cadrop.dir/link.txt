@@ -1,0 +1,1 @@
+/usr/bin/cc  -D_FORTIFY_SOURCE=2 -O2 -Wall -pedantic   CMakeFiles/cadrop.dir/cadrop.c.o CMakeFiles/cadrop.dir/capset_from_namelist.c.o CMakeFiles/cadrop.dir/set_ambient_cap.c.o  -o cadrop  /usr/lib/x86_64-linux-gnu/libcap.so 

@@ -1,0 +1,16 @@
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/userbindmount.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/libuserbindmount-static.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/CMakeFiles/libuserbindmount.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/man/CMakeFiles/install/local.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/man/CMakeFiles/install.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/man/CMakeFiles/list_install_components.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/man/CMakeFiles/rebuild_cache.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/man/CMakeFiles/edit_cache.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/man/CMakeFiles/install/strip.dir
+/home/stefano/Documents/virtlab/gits/userbindmount/build/man/CMakeFiles/userbindmount_manpages.dir

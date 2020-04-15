@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libvdeslirp.h
+slirp/libslirp.h
+-
+
+/home/stefano/Documents/virtlab/gits/libvdeslirp/libvdeslirp.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+poll.h
+-
+time.h
+-
+errno.h
+-
+sys/socket.h
+-
+sys/un.h
+-
+pthread.h
+-
+libvdeslirp.h
+-
+config.h
+-
+slirp/libslirp.h
+-
+
+config.h
+

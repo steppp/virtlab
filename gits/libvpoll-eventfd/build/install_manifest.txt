@@ -1,0 +1,9 @@
+/usr/local/lib/libvpoll.so.0.0.1
+/usr/local/lib/libvpoll.so.0
+/usr/local/lib/libvpoll.so
+/usr/local/include/vpoll.h
+/usr/local/lib/pkgconfig/vpoll.pc
+/usr/local/share/man/man3/vpoll.3
+/usr/local/share/man/man3/vpoll_close.3
+/usr/local/share/man/man3/vpoll_create.3
+/usr/local/share/man/man3/vpoll_ctl.3

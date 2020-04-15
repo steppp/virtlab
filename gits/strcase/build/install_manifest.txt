@@ -1,0 +1,2 @@
+/usr/local/include/strcase.h
+/usr/local/share/man/man3/strcase.3

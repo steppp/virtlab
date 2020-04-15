@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -pedantic  -shared -Wl,-soname,libfduserdata.so.0 -o lib/libfduserdata.so.0.0.1 CMakeFiles/fduserdata.dir/fduserdata.c.o  -lpthread 

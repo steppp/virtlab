@@ -1,0 +1,10 @@
+/usr/local/lib/libvdestack.so.0.1.0
+/usr/local/lib/libvdestack.so.0
+/usr/local/lib/libvdestack.so
+/usr/local/include/vdestack.h
+/usr/local/lib/pkgconfig/vdestack.pc
+/usr/local/share/man/man3/libvdestack.3
+/usr/local/share/man/man3/vde_addstack.3
+/usr/local/share/man/man3/vde_delstack.3
+/usr/local/share/man/man3/vde_msocket.3
+/usr/local/share/man/man3/vde_stackcmd.3

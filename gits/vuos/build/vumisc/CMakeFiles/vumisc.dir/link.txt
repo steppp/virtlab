@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -ggdb -Wall -Wextra -pedantic -std=gnu11 -Wno-unused-parameter  -shared -Wl,-soname,vumisc.so -o vumisc.so CMakeFiles/vumisc.dir/vumisc.c.o  -Wl,-rpath,/home/stefano/Documents/virtlab/gits/vuos/build/lib: ../lib/libvumod.so.0.0.1 
