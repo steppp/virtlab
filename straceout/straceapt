@@ -1,0 +1,608 @@
+[00007ff096265137] execve("/usr/bin/apt", ["apt", "install", "mono"], 0x7fff7ba751c8 /* 45 vars */)                     = 0
+[00007f9940f3ea27] brk(NULL)                                                                                            = 0x55cf6e6a6000
+[00007f9940f3f707] access("/etc/ld.so.preload", R_OK)                                                                   = -1 ENOENT (No such file or directory)
+[00007f9940f3f7f4] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC)                                             = 3
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=84162, ...})                                                 = 0
+[00007f9940f3f9c2] mmap(NULL, 84162, PROT_READ, MAP_PRIVATE, 3, 0)                                                      = 0x7f9940f10000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libapt-private.so.0.0", O_RDONLY|O_CLOEXEC)                  = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240+\1\0\0\0\0\0@\0\0\0\0\0\0\0\260\321\6\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\35\0\34\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=448752, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f9940f0e000
+[00007f9940f3f9c2] mmap(NULL, 452000, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f9940e9f000
+[00007f9940f3fa67] mprotect(0x7f9940eb0000, 372736, PROT_NONE)                                                          = 0
+[00007f9940f3f9c2] mmap(0x7f9940eb0000, 307200, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000)   = 0x7f9940eb0000
+[00007f9940f3f9c2] mmap(0x7f9940efb000, 61440, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5c000)              = 0x7f9940efb000
+[00007f9940f3f9c2] mmap(0x7f9940f0b000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6b000)   = 0x7f9940f0b000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libapt-pkg.so.6.0", O_RDONLY|O_CLOEXEC)                      = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\301\4\0\0\0\0\0@\0\0\0\0\0\0\0\370\245\35\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0\35\0\34\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=1944888, ...})                                               = 0
+[00007f9940f3f9c2] mmap(NULL, 1949688, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f9940cc3000
+[00007f9940f3f9c2] mmap(0x7f9940d0a000, 1318912, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x47000)  = 0x7f9940d0a000
+[00007f9940f3f9c2] mmap(0x7f9940e4c000, 299008, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x189000)            = 0x7f9940e4c000
+[00007f9940f3f9c2] mmap(0x7f9940e95000, 40960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d1000)  = 0x7f9940e95000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC)                         = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\240\t\0\0\0\0\0@\0\0\0\0\0\0\0\350\203\34\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0 \0\37\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=1870824, ...})                                               = 0
+[00007f9940f3f9c2] mmap(NULL, 1886208, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f9940af6000
+[00007f9940f3fa67] mprotect(0x7f9940b8c000, 1204224, PROT_NONE)                                                         = 0
+[00007f9940f3f9c2] mmap(0x7f9940b8c000, 901120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x96000)   = 0x7f9940b8c000
+[00007f9940f3f9c2] mmap(0x7f9940c68000, 299008, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000)            = 0x7f9940c68000
+[00007f9940f3f9c2] mmap(0x7f9940cb2000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bb000)  = 0x7f9940cb2000
+[00007f9940f3f9c2] mmap(0x7f9940cc0000, 10240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)        = 0x7f9940cc0000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC)                          = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0203\0\0\0\0\0\0@\0\0\0\0\0\0\0\300\202\1\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\33\0\32\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=100736, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 103496, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f9940adc000
+[00007f9940f3f9c2] mmap(0x7f9940adf000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000)     = 0x7f9940adf000
+[00007f9940f3f9c2] mmap(0x7f9940af0000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000)              = 0x7f9940af0000
+[00007f9940f3f9c2] mmap(0x7f9940af4000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000)    = 0x7f9940af4000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC)                              = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 o\2\0\0\0\0\0@\0\0\0\0\0\0\0p\342\33\0\0\0\0\0\0\0\0\0@\08\0\f\0@\0A\0@\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0755, st_size=1831600, ...})                                               = 0
+[00007f9940f3f9c2] mmap(NULL, 1844568, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f9940919000
+[00007f9940f3f9c2] mmap(0x7f994093e000, 1351680, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000)  = 0x7f994093e000
+[00007f9940f3f9c2] mmap(0x7f9940a88000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16f000)            = 0x7f9940a88000
+[00007f9940f3f9c2] mmap(0x7f9940ad2000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b8000)  = 0x7f9940ad2000
+[00007f9940f3f9c2] mmap(0x7f9940ad8000, 13656, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)        = 0x7f9940ad8000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC)                         = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300C\0\0\0\0\0\0@\0\0\0\0\0\0\0\310C\1\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\36\0\35\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=84808, ...})                                                 = 0
+[00007f9940f3f9c2] mmap(NULL, 96896, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                        = 0x7f9940901000
+[00007f9940f3fa67] mprotect(0x7f9940905000, 65536, PROT_NONE)                                                           = 0
+[00007f9940f3f9c2] mmap(0x7f9940905000, 49152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000)     = 0x7f9940905000
+[00007f9940f3f9c2] mmap(0x7f9940911000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000)              = 0x7f9940911000
+[00007f9940f3f9c2] mmap(0x7f9940915000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000)    = 0x7f9940915000
+[00007f9940f3f9c2] mmap(0x7f9940917000, 6784, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)         = 0x7f9940917000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC)                        = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`|\0\0\0\0\0\0@\0\0\0\0\0\0\0 5\2\0\0\0\0\0\0\0\0\0@\08\0\v\0@\0#\0\"\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0755, st_size=146912, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f99408ff000
+[00007f9940f3f9c2] mmap(NULL, 132256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f99408de000
+[00007f9940f3f9c2] mmap(0x7f99408e5000, 61440, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000)     = 0x7f99408e5000
+[00007f9940f3f9c2] mmap(0x7f99408f4000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000)              = 0x7f99408f4000
+[00007f9940f3f9c2] mmap(0x7f99408f9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000)    = 0x7f99408f9000
+[00007f9940f3f9c2] mmap(0x7f99408fb000, 13472, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)        = 0x7f99408fb000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC)                              = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0203\0\0\0\0\0\0@\0\0\0\0\0\0\0\300\262\1\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\34\0\33\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=113088, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 115088, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f99408c1000
+[00007f9940f3fa67] mprotect(0x7f99408c4000, 98304, PROT_NONE)                                                           = 0
+[00007f9940f3f9c2] mmap(0x7f99408c4000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000)     = 0x7f99408c4000
+[00007f9940f3f9c2] mmap(0x7f99408d5000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000)              = 0x7f99408d5000
+[00007f9940f3f9c2] mmap(0x7f99408dc000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000)    = 0x7f99408dc000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbz2.so.1.0", O_RDONLY|O_CLOEXEC)                          = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\"\0\0\0\0\0\0@\0\0\0\0\0\0\0@\35\1\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\32\0\31\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=74688, ...})                                                 = 0
+[00007f9940f3f9c2] mmap(NULL, 76840, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                        = 0x7f99408ae000
+[00007f9940f3f9c2] mmap(0x7f99408b0000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000)     = 0x7f99408b0000
+[00007f9940f3f9c2] mmap(0x7f99408bd000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000)                = 0x7f99408bd000
+[00007f9940f3f9c2] mmap(0x7f99408bf000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000)    = 0x7f99408bf000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC)                           = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0205\0\0\0\0\0\0@\0\0\0\0\0\0\0\300s\2\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\34\0\33\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=162496, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 164496, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f9940885000
+[00007f9940f3fa67] mprotect(0x7f9940888000, 147456, PROT_NONE)                                                          = 0
+[00007f9940f3f9c2] mmap(0x7f9940888000, 98304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000)     = 0x7f9940888000
+[00007f9940f3f9c2] mmap(0x7f99408a0000, 45056, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b000)              = 0x7f99408a0000
+[00007f9940f3f9c2] mmap(0x7f99408ac000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000)    = 0x7f99408ac000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC)                            = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\3402\0\0\0\0\0\0@\0\0\0\0\0\0\0\230\2\2\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\33\0\32\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=133464, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 135544, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f9940863000
+[00007f9940f3f9c2] mmap(0x7f9940866000, 106496, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000)    = 0x7f9940866000
+[00007f9940f3f9c2] mmap(0x7f9940880000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000)              = 0x7f9940880000
+[00007f9940f3f9c2] mmap(0x7f9940883000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000)    = 0x7f9940883000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libzstd.so.1", O_RDONLY|O_CLOEXEC)                           = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300W\0\0\0\0\0\0@\0\0\0\0\0\0\0000\201\n\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\32\0\31\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=690096, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 692288, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f99407b9000
+[00007f9940f3f9c2] mmap(0x7f99407be000, 598016, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000)    = 0x7f99407be000
+[00007f9940f3f9c2] mmap(0x7f9940850000, 69632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x97000)              = 0x7f9940850000
+[00007f9940f3f9c2] mmap(0x7f9940861000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa7000)    = 0x7f9940861000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libudev.so.1", O_RDONLY|O_CLOEXEC)                           = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@X\0\0\0\0\0\0@\0\0\0\0\0\0\0\300\241\2\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0\34\0\33\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=174272, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f99407b7000
+[00007f9940f3f9c2] mmap(NULL, 178440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f994078b000
+[00007f9940f3f9c2] mmap(0x7f9940790000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000)    = 0x7f9940790000
+[00007f9940f3f9c2] mmap(0x7f99407ab000, 40960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20000)              = 0x7f99407ab000
+[00007f9940f3f9c2] mmap(0x7f99407b5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000)    = 0x7f99407b5000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC)                        = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220)\1\0\0\0\0\0@\0\0\0\0\0\0\0`\273\n\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0\36\0\35\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=705248, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 709872, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f99406dd000
+[00007f9940f3f9c2] mmap(0x7f99406ee000, 466944, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000)   = 0x7f99406ee000
+[00007f9940f3f9c2] mmap(0x7f9940760000, 151552, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x83000)             = 0x7f9940760000
+[00007f9940f3f9c2] mmap(0x7f9940785000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa7000)   = 0x7f9940785000
+[00007f9940f3f9c2] mmap(0x7f994078a000, 1264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)         = 0x7f994078a000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC)                        = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\305\0\0\0\0\0\0@\0\0\0\0\0\0\0\370\273\21\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\33\0\32\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=1163960, ...})                                               = 0
+[00007f9940f3f9c2] mmap(NULL, 1167304, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f99405c0000
+[00007f9940f3f9c2] mmap(0x7f99405cc000, 839680, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000)    = 0x7f99405cc000
+[00007f9940f3f9c2] mmap(0x7f9940699000, 249856, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd9000)             = 0x7f9940699000
+[00007f9940f3f9c2] mmap(0x7f99406d6000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x115000)  = 0x7f99406d6000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC)                              = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\361\0\0\0\0\0\0@\0\0\0\0\0\0\00002\24\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\35\0\34\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=1325424, ...})                                               = 0
+[00007f9940f3f9c2] mmap(NULL, 1327360, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f994047b000
+[00007f9940f3f9c2] mmap(0x7f994048a000, 634880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000)    = 0x7f994048a000
+[00007f9940f3f9c2] mmap(0x7f9940525000, 626688, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xaa000)             = 0x7f9940525000
+[00007f9940f3f9c2] mmap(0x7f99405be000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x142000)   = 0x7f99405be000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC)                             = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\2603\0\0\0\0\0\0@\0\0\0\0\0\0\0\350\223\0\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0 \0\37\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=39912, ...})                                                 = 0
+[00007f9940f3f9c2] mmap(NULL, 44000, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                        = 0x7f9940470000
+[00007f9940f3f9c2] mmap(0x7f9940473000, 16384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000)     = 0x7f9940473000
+[00007f9940f3f9c2] mmap(0x7f9940477000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000)                = 0x7f9940477000
+[00007f9940f3f9c2] mmap(0x7f9940479000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8000)     = 0x7f9940479000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f7f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC)                      = 3
+[00007f9940f3f8b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0pF\0\0\0\0\0\0@\0\0\0\0\0\0\0\20\22\2\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\33\0\32\0"..., 832) = 832
+[00007f9940f3f675] fstat(3, {st_mode=S_IFREG|0644, st_size=137424, ...})                                                = 0
+[00007f9940f3f9c2] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f994046e000
+[00007f9940f3f9c2] mmap(NULL, 139872, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f994044b000
+[00007f9940f3f9c2] mmap(0x7f994044f000, 77824, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000)     = 0x7f994044f000
+[00007f9940f3f9c2] mmap(0x7f9940462000, 40960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000)              = 0x7f9940462000
+[00007f9940f3f9c2] mmap(0x7f994046c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20000)    = 0x7f994046c000
+[00007f9940f3f727] close(3)                                                                                             = 0
+[00007f9940f3f9c2] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f9940449000
+[00007f9940f3f9c2] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                            = 0x7f9940446000
+[00007f9940f26b2c] arch_prctl(ARCH_SET_FS, 0x7f9940446800)                                                              = 0
+[00007f9940f3fa67] mprotect(0x7f9940ad2000, 12288, PROT_READ)                                                           = 0
+[00007f9940f3fa67] mprotect(0x7f994046c000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f99408f9000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940479000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f99405be000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f99406d6000, 8192, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f99408ac000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940883000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940785000, 16384, PROT_READ)                                                           = 0
+[00007f9940f3fa67] mprotect(0x7f99407b5000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940861000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f99408bf000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f99408dc000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940915000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940af4000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940cb2000, 45056, PROT_READ)                                                           = 0
+[00007f9940f3fa67] mprotect(0x7f9940e95000, 36864, PROT_READ)                                                           = 0
+[00007f9940f3fa67] mprotect(0x7f9940f0b000, 8192, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x55cf6cdd8000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa67] mprotect(0x7f9940f4d000, 4096, PROT_READ)                                                            = 0
+[00007f9940f3fa47] munmap(0x7f9940f10000, 84162)                                                                        = 0
+[00007f99408e58b5] set_tid_address(0x7f9940446ad0)                                                                      = 3415
+[00007f99408e5900] set_robust_list(0x7f9940446ae0, 24)                                                                  = 0
+[00007f99408f21e2] rt_sigaction(SIGRTMIN, {sa_handler=0x7f99408e56b0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f99408f2110}, NULL, 8) = 0
+[00007f99408f21e2] rt_sigaction(SIGRT_1, {sa_handler=0x7f99408e5750, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f99408f2110}, NULL, 8) = 0
+[00007f99408e59e4] rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8)                                                   = 0
+[00007f9940a0ce30] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY})                     = 0
+[00007f9940a0d2c7] brk(NULL)                                                                                            = 0x55cf6e6a6000
+[00007f9940a0d2c7] brk(0x55cf6e6c7000)                                                                                  = 0x55cf6e6c7000
+[00007f99408ef1a7] futex(0x7f9940cc06bc, FUTEX_WAKE_PRIVATE, 2147483647)                                                = 0
+[00007f99408ef1a7] futex(0x7f9940cc06c8, FUTEX_WAKE_PRIVATE, 2147483647)                                                = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666)                                        = 3
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC)                               = 4
+[00007f9940a06ad5] fstat(4, {st_mode=S_IFREG|0644, st_size=3035216, ...})                                               = 0
+[00007f9940a110b2] mmap(NULL, 3035216, PROT_READ, MAP_PRIVATE, 4, 0)                                                    = 0x7f9940160000
+[00007f9940a0c457] close(4)                                                                                             = 0
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY)                    = 4
+[00007f9940a06ad5] fstat(4, {st_mode=S_IFREG|0644, st_size=27002, ...})                                                 = 0
+[00007f9940a110b2] mmap(NULL, 27002, PROT_READ, MAP_SHARED, 4, 0)                                                       = 0x7f9940f1e000
+[00007f9940a0c457] close(4)                                                                                             = 0
+[00007f99408ef1a7] futex(0x7f9940ad7634, FUTEX_WAKE_PRIVATE, 2147483647)                                                = 0
+[00007f9940a06a86] stat("/etc/apt/apt.conf.d/", {st_mode=S_IFDIR|0755, st_size=4096, ...})                              = 0
+[00007f9940a06a86] stat("/etc/apt/apt.conf.d/", {st_mode=S_IFDIR|0755, st_size=4096, ...})                              = 0
+[00007f9940a0d2c7] brk(0x55cf6e6e8000)                                                                                  = 0x55cf6e6e8000
+[00007f9940a0c5d8] openat(AT_FDCWD, "/etc/apt/apt.conf.d/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY)                  = 4
+[00007f9940a06ad5] fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...})                                                  = 0
+[00007f99409df347] getdents64(4, /* 9 entries */, 32768)                                                                = 288
+[00007f99409df347] getdents64(4, /* 0 entries */, 32768)                                                                = 0
+[00007f9940a0c457] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/apt.conf.d/00aptitude", O_RDONLY|O_NOCTTY|O_CLOEXEC)                      = 4
+[00007f9940a0755e] read(4, "Aptitude::Get-Root-Command \"sudo:/usr/bin/sudo\";\n", 4096)                                = 49
+[00007f9940a0755e] read(4, "", 4047)                                                                                    = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/apt.conf.d/00trustcdrom", O_RDONLY|O_NOCTTY|O_CLOEXEC)                    = 4
+[00007f9940a0755e] read(4, "APT::Authentication::TrustCDROM \"true\";\n", 4096)                                         = 40
+[00007f9940a0755e] read(4, "", 4056)                                                                                    = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/apt.conf.d/01autoremove", O_RDONLY|O_NOCTTY|O_CLOEXEC)                    = 4
+[00007f9940a0755e] read(4, "APT\n{\n  NeverAutoRemove\n  {\n\t\"^firmware-linux.*\";\n\t\"^linux-firmw"..., 4096)       = 630
+[00007f9940a0755e] read(4, "", 3466)                                                                                    = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/apt.conf.d/01autoremove-kernels", O_RDONLY|O_NOCTTY|O_CLOEXEC)            = 4
+[00007f9940a0755e] read(4, "// DO NOT EDIT! File autogenerated by /etc/kernel/postinst.d/apt"..., 4096)                 = 2162
+[00007f9940a0755e] read(4, "", 1934)                                                                                    = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/apt.conf.d/20listchanges", O_RDONLY|O_NOCTTY|O_CLOEXEC)                   = 4
+[00007f9940a0755e] read(4, "DPkg::Pre-Install-Pkgs { \"/usr/bin/apt-listchanges --apt || test"..., 4096)                = 202
+[00007f9940a0755e] read(4, "", 3894)                                                                                    = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/apt.conf.d/20packagekit", O_RDONLY|O_NOCTTY|O_CLOEXEC)                    = 4
+[00007f9940a0755e] read(4, "// THIS FILE IS USED TO INFORM PACKAGEKIT\n// THAT THE UPDATE-INF"..., 4096)                = 1040
+[00007f9940a0755e] read(4, "", 3056)                                                                                    = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/apt.conf.d/70debconf", O_RDONLY|O_NOCTTY|O_CLOEXEC)                       = 4
+[00007f9940a0755e] read(4, "// Pre-configure all packages with debconf before they are insta"..., 4096)                 = 182
+[00007f9940a0755e] read(4, "", 3914)                                                                                    = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a06a86] stat("/etc/apt/apt.conf", 0x7ffd04e93740)                                                            = -1 ENOENT (No such file or directory)
+[00007f9940a0cb16] ioctl(0, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC)                               = 4
+[00007f9940a06ad5] fstat(4, {st_mode=S_IFREG|0644, st_size=2995, ...})                                                  = 0
+[00007f9940a0c714] read(4, "# Locale name alias data base.\n# Copyright (C) 1996-2019 Free So"..., 4096)                = 2995
+[00007f9940a0c714] read(4, "", 4096)                                                                                    = 0
+[00007f9940a0c457] close(4)                                                                                             = 0
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/apt.mo", O_RDONLY)                             = -1 ENOENT (No such file or directory)
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/apt.mo", O_RDONLY)                                = -1 ENOENT (No such file or directory)
+[00007f9940a06a86] stat("/var/lib/dpkg/status", {st_mode=S_IFREG|0644, st_size=1642231, ...})                           = 0
+[00007f9940a06a86] stat("/usr/bin/dpkg", {st_mode=S_IFREG|0755, st_size=305696, ...})                                   = 0
+[00007f9940a06a86] stat("/etc/debian_version", {st_mode=S_IFREG|0644, st_size=13, ...})                                 = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/usr/share/dpkg/cputable", O_RDONLY)                                               = 4
+[00007f9940a0755e] read(4, "# Version=1.0\n#\n# This file contains the table of known CPU name"..., 8191)               = 1971
+[00007f9940a0755e] read(4, "", 8191)                                                                                    = 0
+[00007f9940a06a86] stat("/usr/share/dpkg/tupletable", {st_mode=S_IFREG|0644, st_size=2249, ...})                        = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/usr/share/dpkg/tupletable", O_RDONLY)                                             = 5
+[00007f9940a0755e] read(5, "# Version=1.0\n#\n# Bidirectional mapping between a Debian arch tu"..., 8191)               = 2249
+[00007f9940a0d2c7] brk(0x55cf6e709000)                                                                                  = 0x55cf6e709000
+[00007f9940a0755e] read(5, "", 8191)                                                                                    = 0
+[00007f9940a0c457] close(5)                                                                                             = 0
+[00007f9940a0c457] close(4)                                                                                             = 0
+[00007f99409548b2] rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f99409547e0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[00007f9940a0cb16] ioctl(1, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f99409548b2] rt_sigaction(SIGWINCH, {sa_handler=0x7f9940edcb80, sa_mask=[WINCH], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f99409547e0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+[00007f9940a0d3e7] ioctl(1, TIOCGWINSZ, {ws_row=25, ws_col=185, ws_xpixel=0, ws_ypixel=0})                              = 0
+[00007f9940a0cb16] ioctl(1, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f9940a0cb16] ioctl(1, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f9940a06a86] stat("/etc/apt/sources.list", {st_mode=S_IFREG|0644, st_size=172, ...})                              = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/etc/apt/sources.list", O_RDONLY|O_NOCTTY|O_CLOEXEC)                               = 4
+[00007f9940a0755e] read(4, "# deb http://deb.debian.org/debian/ sid main\n\ndeb http://deb.deb"..., 4096)               = 172
+[00007f9940a0755e] read(4, "", 3924)                                                                                    = 0
+[00007f9940a0c5d8] openat(AT_FDCWD, "/var/lib/apt/lists/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY)                   = 5
+[00007f9940a06ad5] fstat(5, {st_mode=S_IFDIR|0755, st_size=4096, ...})                                                  = 0
+[00007f99409df347] getdents64(5, /* 16 entries */, 32768)                                                               = 1080
+[00007f99409df347] getdents64(5, /* 0 entries */, 32768)                                                                = 0
+[00007f9940a0c457] close(5)                                                                                             = 0
+[00007f9940a07ea7] pipe([5, 6])                                                                                         = 0
+[00007f99409e3f1b] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f9940446ad0) = 3416
+[00007f9940a07d93] close(6)                                                                                             = 0
+[00007f9940a0c4a0] fcntl(5, F_GETFL)                                                                                    = 0 (flags O_RDONLY)
+[00007f9940a06ad5] fstat(5, {st_mode=S_IFIFO|0600, st_size=0, ...})                                                     = 0
+[00007f9940a0755e] read(5, "", 4096)                                                                                    = 0
+[00007f9940a0755e] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3416, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+[00007f9940a0c457] close(5)                                                                                             = 0
+[00007f99409e3b96] wait4(3416, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL)                                        = 3416
+[00007f9940a06a86] stat("/var/lib/apt/lists/deb.debian.org_debian_dists_sid_InRelease", {st_mode=S_IFREG|0644, st_size=146310, ...}) = 0
+[00007f9940a06a86] stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...})                                      = 0
+[00007f99409e4b77] geteuid()                                                                                            = 1000
+[00007f9940a0794a] faccessat(AT_FDCWD, "/tmp", R_OK|W_OK|X_OK)                                                          = 0
+[00007f99409e4b47] getpid()                                                                                             = 3415
+[00007f9940a072c7] openat(AT_FDCWD, "/tmp/clearsigned.message.4ngp4q", O_RDWR|O_CREAT|O_EXCL, 0600)                     = 5
+[00007f9940a09247] unlink("/tmp/clearsigned.message.4ngp4q")                                                            = 0
+[00007f9940a06a86] stat("/usr/bin/xz", {st_mode=S_IFREG|0755, st_size=81192, ...})                                      = 0
+[00007f9940a06a86] stat("/usr/bin/zstd", 0x7ffd04e91fe0)                                                                = -1 ENOENT (No such file or directory)
+[00007f9940a06a86] stat("/usr/bin/lz4", 0x7ffd04e91fe0)                                                                 = -1 ENOENT (No such file or directory)
+[00007f9940a06a86] stat("/bin/gzip", {st_mode=S_IFREG|0755, st_size=98048, ...})                                        = 0
+[00007f9940a06a86] stat("/usr/bin/xz", {st_mode=S_IFREG|0755, st_size=81192, ...})                                      = 0
+[00007f9940a06a86] stat("/bin/bzip2", {st_mode=S_IFREG|0755, st_size=38984, ...})                                       = 0
+[00007f9940a06a86] stat("/usr/bin/xz", {st_mode=S_IFREG|0755, st_size=81192, ...})                                      = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/var/lib/apt/lists/deb.debian.org_debian_dists_sid_InRelease", O_RDONLY)           = 6
+[00007f9940a06ad5] fstat(6, {st_mode=S_IFREG|0644, st_size=146310, ...})                                                = 0
+[00007f9940a0755e] read(6, "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nOrigin: Debian\n"..., 4096)             = 4096
+[00007f9940a0755e] read(6, "2 contrib/binary-all/Packages.xz\n e00258bbbf38227aadbea5bf9f08af"..., 4096)                = 4096
+[00007f9940a07603] write(5, "Origin: Debian\nLabel: Debian\nSuite: unstable\nCodename: sid\nChang"..., 4096)            = 4096
+[00007f9940a0755e] read(6, "\n 8dc5aea5b03dff8595f096f9e368e888       32 contrib/debian-insta"..., 4096)                = 4096
+[00007f9940a07603] write(5, "aadbea5bf9f08af11      105 contrib/binary-all/Release\n 120befe50"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "1ff6f7ee80ae4eff0    93316 contrib/dep11/Components-kfreebsd-amd"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ib/debian-installer/binary-amd64/Packages.xz\n 465133a3a391b0f628"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "801c4a8   509763 main/Contents-udeb-amd64\n 659455edf81ba28fbf397"..., 4096)                = 4096
+[00007f9940a07603] write(5, "ts-kfreebsd-amd64.yml\n 18f3faddbae09284fcea1481e3a750dd    11473"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "879d7c96b5cd6fe89857d69efc 44605589 main/binary-ppc64el/Packages"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "edf81ba28fbf39735fd6605db7    40026 main/Contents-udeb-amd64.gz\n"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "s.gz\n dd896f606df7a601a9c75a3da552b8a4    48200 main/debian-inst"..., 4096)                = 4096
+[00007f9940a07603] write(5, "pc64el/Packages\n fcaac54715a2e4ee12b997bf3aefc5a8    27910 main/"..., 4096)               = 4096
+[00007f9940a0755e] read(6, ".bz2\n 9bd5cb899afca5ef019b3dc97f1cb20d     1720 main/i18n/Transl"..., 4096)                = 4096
+[00007f9940a07603] write(5, "ain/debian-installer/binary-s390x/Packages.xz\n 8644bd20faff93a0b"..., 4096)               = 4096
+[00007f9940a0755e] read(6, " cff403341a066cf69b5b179397e074e9    27796 main/i18n/Translation"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ain/i18n/Translation-eo.diff/Index\n ac143382d5cd8a1dd30c1712dddd"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "64/20191129/images/MD5SUMS\n 33e0871447de33c282911a8999b0b041    "..., 4096)                = 4096
+[00007f9940a07603] write(5, "18n/Translation-ru.diff/Index\n 731744fcd0255d4b7454a9118ad0340e "..., 4096)               = 4096
+[00007f9940a0755e] read(6, "i386/current/images/MD5SUMS\n e7fd636b238e02831ea65cad395f0918   "..., 4096)                = 4096
+[00007f9940a07603] write(5, "a8999b0b041    47987 main/installer-arm64/20191129/images/SHA256"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "ler-s390x/20190118/images/SHA256SUMS\n c9a198dcb4c7dc61ce0a3add9e"..., 4096)                = 4096
+[00007f9940a07603] write(5, "5cad395f0918    75734 main/installer-i386/current/images/SHA256S"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "-free/Contents-udeb-armhf\n 4a4dd3598707603b3f76a2378a4504aa     "..., 4096)                = 4096
+[00007f9940a07603] write(5, "7dc61ce0a3add9e2ae6c6      374 main/installer-s390x/20190410/ima"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "z\n 30b1571587ea3e418e360541bf978ba0    62028 non-free/binary-ppc"..., 4096)                = 4096
+[00007f9940a07603] write(5, "378a4504aa       20 non-free/Contents-udeb-armhf.gz\n d41d8cd98f0"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "    32 non-free/debian-installer/binary-s390x/Packages.xz\n e7cee"..., 4096)                = 4096
+[00007f9940a07603] write(5, "free/binary-ppc64el/Packages.xz\n d4aed8973b2fdb4ebe2539a35291133"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "mel.gz\n 84fbe878975c58646bec9ee80fd047b3714463efd10ca86e2a71b0e1"..., 4096)                = 4096
+[00007f9940a07603] write(5, "kages.xz\n e7ceeb59c6faba0761d4bec329d3d26d      108 non-free/deb"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "ade299e1ae30befee90aa5db7049faca4190bf535   124386 contrib/binar"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "10ca86e2a71b0e1cbcc1a07  3007128 contrib/Contents-armhf\n 570771f"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "9097f80e277ad3a05af1f8428ffce1bb52e64bbe6ae3e56f8b2ac22740c     "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "6 contrib/binary-all/Packages\n 1cdbb77dad105af4efa256237a9c1d704"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "rib/debian-installer/binary-i386/Release\n e3b0c44298fc1c149afbf4"..., 4096)                = 4096
+[00007f9940a07603] write(5, "b2ac22740c      108 contrib/binary-mipsel/Release\n 18f55115d599c"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "1b156f5ba11fc95b0d6f4a3aa14558b3ec4eec9578ffeeb30b08d5b   114252"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855       "..., 4096)                = 4096
+[00007f9940a0755e] read(6, "a05bbc07332930    28024 main/Contents-mipsel.diff/Index\n aca05cf"..., 4096)                = 4096
+[00007f9940a07603] write(5, "b08d5b   114252 contrib/dep11/Components-ppc64el.yml\n 743843fc10"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "2d9ec4516dcc884b 10744641 main/binary-arm64/Packages.gz\n 608c22f"..., 4096)                = 4096
+[00007f9940a07603] write(5, "/Index\n aca05cfcfb0838a8ca93a4b0a222ed9b350cb1ad9955cdff63434a8e"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "b332af1c07b9d1b94031a37c912cd9c08514ded72e7b22990d056c2    16761"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ges.gz\n 608c22f4065a2eeccdf086644b16c3cde03ca1bb65b0bec2b891037b"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "9eaee9b665539956ef860f083f3885b3d69145a8c9bd33dba701039a2c46e00 "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "d056c2    16761 main/debian-installer/binary-all/Packages.gz\n f3"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "b4205b1e325d8ec967c1c851746ed53c934a807f025823f8fbb5    12052 ma"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "701039a2c46e00      106 main/debian-installer/binary-ppc64el/Rel"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "f22c1e0c2028140022c7e43893b8c4e53e6ba7353ddbd457321757240     44"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "bb5    12052 main/i18n/Translation-ca.diff/Index\n 80e9ef72dd6bbe"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "db8e31ea9f13807c89bea030a5652bd73f528d13b303922c16b309  1449460 "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "21757240     4444 main/i18n/Translation-id\n 73f7a183e859a27b0d48"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "df2b51b0892f21859f9f1a5050efc85f1d77d12a7814ea    77595 main/ins"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "6b309  1449460 main/i18n/Translation-sk.bz2\n a2d16dc54b89228145c"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "s/MD5SUMS\n 01e8099c2edf2073af5aadfce51e66c5f1fa2b1bb7d80cb822134"..., 4096)                = 4096
+[00007f9940a07603] write(5, " 77595 main/installer-amd64/20200314/images/SHA256SUMS\n d078f177"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "  624 main/installer-mips64el/20191129/images/MD5SUMS\n 2c16f1f50"..., 4096)                = 4096
+[00007f9940a07603] write(5, "1bb7d80cb822134374915c58e2    73665 main/installer-armhf/2019041"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "t/images/SHA256SUMS\n 64177173eae642cd7473e17236c4eb9c2fda2d62a87"..., 4096)                = 4096
+[00007f9940a07603] write(5, "SUMS\n 2c16f1f5099101a22ad80a659a022fd484e5f34d0668de935da1694a2e"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "70753d81170dca7326a0e4706739c9d2bfad66afc95e1dbe6845 17080969 no"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "eb9c2fda2d62a871b3dc8cb36c6d365b582c      374 main/installer-s39"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "e/binary-amd64/Release\n fef39480d3c157e0ba8bf102fe4c37b32f7dab6a"..., 4096)                = 4096
+[00007f9940a07603] write(5, "845 17080969 non-free/Contents-mipsel\n 64ca7b8ac298a4cc9ab6f6f63"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "a0d5e22d6a7e35b173d4dcb19dcad49f901f79c4961a168c193f87669f3d46  "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "e4c37b32f7dab6a91b50e47b2a4e424c2321327   234750 non-free/binary"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "307631bf40ef5679275       32 non-free/debian-installer/binary-mi"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "93f87669f3d46    61307 non-free/binary-s390x/Packages.gz\n a6f458"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "22110be6e30adeb8655b7448533a39cbef     2391 non-free/dep11/icons"..., 4096)                 = 2950
+[00007f9940a07603] write(5, "aller/binary-mipsel/Packages.xz\n 32e889dd01e87d5bc03c0ef9bfc6860"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "", 4096)                                                                                    = 0
+[00007f9940a07603] write(5, "ree/dep11/icons-128x128.tar.gz\n b10f854a82350261f92985235a7184e6"..., 1299)               = 1299
+[00007f9940a0c457] close(6)                                                                                             = 0
+[00007f9940a07697] lseek(5, 0, SEEK_SET)                                                                                = 0
+[00007f9940a06ad5] fstat(5, {st_mode=S_IFREG|0600, st_size=144659, ...})                                                = 0
+[00007f9940a110b2] mmap(NULL, 147456, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                           = 0x7f994013c000
+[00007f9940a0755e] read(5, "Origin: Debian\nLabel: Debian\nSuite: unstable\nCodename: sid\nChang"..., 144662)           = 144659
+[00007f9940a0755e] read(5, "", 3)                                                                                       = 0
+[00007f9940a0d2c7] brk(0x55cf6e72a000)                                                                                  = 0x55cf6e72a000
+[00007f9940a0d2c7] brk(0x55cf6e74b000)                                                                                  = 0x55cf6e74b000
+[00007f9940a0d2c7] brk(0x55cf6e76c000)                                                                                  = 0x55cf6e76c000
+[00007f9940a0d2c7] brk(0x55cf6e78d000)                                                                                  = 0x55cf6e78d000
+[00007f9940a0c5d8] openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC)                                               = 6
+[00007f9940a06ad5] fstat(6, {st_mode=S_IFREG|0644, st_size=2683, ...})                                                  = 0
+[00007f9940a06ad5] fstat(6, {st_mode=S_IFREG|0644, st_size=2683, ...})                                                  = 0
+[00007f9940a0c714] read(6, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\7\0\0\0\7\0\0\0\0\0\0\0\254\0\0\0\7\0\0\0\r\200\0\0\0\2338\370p\233\325\314\340\234\305\313\360\235\267\0`"..., 4096) = 2683
+[00007f9940a07697] lseek(6, -1710, SEEK_CUR)                                                                            = 973
+[00007f9940a0c714] read(6, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\10\0\0\0\0\0\0\0\255\0\0\0\10\0\0\0\21\377\377\377\377>(\350L\377\377\377\377p\274\201p\377\377\377\377"..., 4096) = 1710
+[00007f9940a0c457] close(6)                                                                                             = 0
+[00007f9940a11147] munmap(0x7f994013c000, 147456)                                                                       = 0
+[00007f9940a07d93] close(5)                                                                                             = 0
+[00007f9940a06a86] stat("/var/lib/apt/lists/deb.debian.org_debian_dists_sid_InRelease", {st_mode=S_IFREG|0644, st_size=146310, ...}) = 0
+[00007f9940a06a86] stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...})                                      = 0
+[00007f99409e4b77] geteuid()                                                                                            = 1000
+[00007f9940a0794a] faccessat(AT_FDCWD, "/tmp", R_OK|W_OK|X_OK)                                                          = 0
+[00007f99409e4b47] getpid()                                                                                             = 3415
+[00007f9940a072c7] openat(AT_FDCWD, "/tmp/clearsigned.message.eq5gks", O_RDWR|O_CREAT|O_EXCL, 0600)                     = 5
+[00007f9940a09247] unlink("/tmp/clearsigned.message.eq5gks")                                                            = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/var/lib/apt/lists/deb.debian.org_debian_dists_sid_InRelease", O_RDONLY)           = 6
+[00007f9940a06ad5] fstat(6, {st_mode=S_IFREG|0644, st_size=146310, ...})                                                = 0
+[00007f9940a0755e] read(6, "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nOrigin: Debian\n"..., 4096)             = 4096
+[00007f9940a0755e] read(6, "2 contrib/binary-all/Packages.xz\n e00258bbbf38227aadbea5bf9f08af"..., 4096)                = 4096
+[00007f9940a07603] write(5, "Origin: Debian\nLabel: Debian\nSuite: unstable\nCodename: sid\nChang"..., 4096)            = 4096
+[00007f9940a0755e] read(6, "\n 8dc5aea5b03dff8595f096f9e368e888       32 contrib/debian-insta"..., 4096)                = 4096
+[00007f9940a07603] write(5, "aadbea5bf9f08af11      105 contrib/binary-all/Release\n 120befe50"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "1ff6f7ee80ae4eff0    93316 contrib/dep11/Components-kfreebsd-amd"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ib/debian-installer/binary-amd64/Packages.xz\n 465133a3a391b0f628"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "801c4a8   509763 main/Contents-udeb-amd64\n 659455edf81ba28fbf397"..., 4096)                = 4096
+[00007f9940a07603] write(5, "ts-kfreebsd-amd64.yml\n 18f3faddbae09284fcea1481e3a750dd    11473"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "879d7c96b5cd6fe89857d69efc 44605589 main/binary-ppc64el/Packages"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "edf81ba28fbf39735fd6605db7    40026 main/Contents-udeb-amd64.gz\n"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "s.gz\n dd896f606df7a601a9c75a3da552b8a4    48200 main/debian-inst"..., 4096)                = 4096
+[00007f9940a07603] write(5, "pc64el/Packages\n fcaac54715a2e4ee12b997bf3aefc5a8    27910 main/"..., 4096)               = 4096
+[00007f9940a0755e] read(6, ".bz2\n 9bd5cb899afca5ef019b3dc97f1cb20d     1720 main/i18n/Transl"..., 4096)                = 4096
+[00007f9940a07603] write(5, "ain/debian-installer/binary-s390x/Packages.xz\n 8644bd20faff93a0b"..., 4096)               = 4096
+[00007f9940a0755e] read(6, " cff403341a066cf69b5b179397e074e9    27796 main/i18n/Translation"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ain/i18n/Translation-eo.diff/Index\n ac143382d5cd8a1dd30c1712dddd"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "64/20191129/images/MD5SUMS\n 33e0871447de33c282911a8999b0b041    "..., 4096)                = 4096
+[00007f9940a07603] write(5, "18n/Translation-ru.diff/Index\n 731744fcd0255d4b7454a9118ad0340e "..., 4096)               = 4096
+[00007f9940a0755e] read(6, "i386/current/images/MD5SUMS\n e7fd636b238e02831ea65cad395f0918   "..., 4096)                = 4096
+[00007f9940a07603] write(5, "a8999b0b041    47987 main/installer-arm64/20191129/images/SHA256"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "ler-s390x/20190118/images/SHA256SUMS\n c9a198dcb4c7dc61ce0a3add9e"..., 4096)                = 4096
+[00007f9940a07603] write(5, "5cad395f0918    75734 main/installer-i386/current/images/SHA256S"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "-free/Contents-udeb-armhf\n 4a4dd3598707603b3f76a2378a4504aa     "..., 4096)                = 4096
+[00007f9940a07603] write(5, "7dc61ce0a3add9e2ae6c6      374 main/installer-s390x/20190410/ima"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "z\n 30b1571587ea3e418e360541bf978ba0    62028 non-free/binary-ppc"..., 4096)                = 4096
+[00007f9940a07603] write(5, "378a4504aa       20 non-free/Contents-udeb-armhf.gz\n d41d8cd98f0"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "    32 non-free/debian-installer/binary-s390x/Packages.xz\n e7cee"..., 4096)                = 4096
+[00007f9940a07603] write(5, "free/binary-ppc64el/Packages.xz\n d4aed8973b2fdb4ebe2539a35291133"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "mel.gz\n 84fbe878975c58646bec9ee80fd047b3714463efd10ca86e2a71b0e1"..., 4096)                = 4096
+[00007f9940a07603] write(5, "kages.xz\n e7ceeb59c6faba0761d4bec329d3d26d      108 non-free/deb"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "ade299e1ae30befee90aa5db7049faca4190bf535   124386 contrib/binar"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "10ca86e2a71b0e1cbcc1a07  3007128 contrib/Contents-armhf\n 570771f"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "9097f80e277ad3a05af1f8428ffce1bb52e64bbe6ae3e56f8b2ac22740c     "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "6 contrib/binary-all/Packages\n 1cdbb77dad105af4efa256237a9c1d704"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "rib/debian-installer/binary-i386/Release\n e3b0c44298fc1c149afbf4"..., 4096)                = 4096
+[00007f9940a07603] write(5, "b2ac22740c      108 contrib/binary-mipsel/Release\n 18f55115d599c"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "1b156f5ba11fc95b0d6f4a3aa14558b3ec4eec9578ffeeb30b08d5b   114252"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855       "..., 4096)                = 4096
+[00007f9940a0755e] read(6, "a05bbc07332930    28024 main/Contents-mipsel.diff/Index\n aca05cf"..., 4096)                = 4096
+[00007f9940a07603] write(5, "b08d5b   114252 contrib/dep11/Components-ppc64el.yml\n 743843fc10"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "2d9ec4516dcc884b 10744641 main/binary-arm64/Packages.gz\n 608c22f"..., 4096)                = 4096
+[00007f9940a07603] write(5, "/Index\n aca05cfcfb0838a8ca93a4b0a222ed9b350cb1ad9955cdff63434a8e"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "b332af1c07b9d1b94031a37c912cd9c08514ded72e7b22990d056c2    16761"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ges.gz\n 608c22f4065a2eeccdf086644b16c3cde03ca1bb65b0bec2b891037b"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "9eaee9b665539956ef860f083f3885b3d69145a8c9bd33dba701039a2c46e00 "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "d056c2    16761 main/debian-installer/binary-all/Packages.gz\n f3"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "b4205b1e325d8ec967c1c851746ed53c934a807f025823f8fbb5    12052 ma"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "701039a2c46e00      106 main/debian-installer/binary-ppc64el/Rel"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "f22c1e0c2028140022c7e43893b8c4e53e6ba7353ddbd457321757240     44"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "bb5    12052 main/i18n/Translation-ca.diff/Index\n 80e9ef72dd6bbe"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "db8e31ea9f13807c89bea030a5652bd73f528d13b303922c16b309  1449460 "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "21757240     4444 main/i18n/Translation-id\n 73f7a183e859a27b0d48"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "df2b51b0892f21859f9f1a5050efc85f1d77d12a7814ea    77595 main/ins"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "6b309  1449460 main/i18n/Translation-sk.bz2\n a2d16dc54b89228145c"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "s/MD5SUMS\n 01e8099c2edf2073af5aadfce51e66c5f1fa2b1bb7d80cb822134"..., 4096)                = 4096
+[00007f9940a07603] write(5, " 77595 main/installer-amd64/20200314/images/SHA256SUMS\n d078f177"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "  624 main/installer-mips64el/20191129/images/MD5SUMS\n 2c16f1f50"..., 4096)                = 4096
+[00007f9940a07603] write(5, "1bb7d80cb822134374915c58e2    73665 main/installer-armhf/2019041"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "t/images/SHA256SUMS\n 64177173eae642cd7473e17236c4eb9c2fda2d62a87"..., 4096)                = 4096
+[00007f9940a07603] write(5, "SUMS\n 2c16f1f5099101a22ad80a659a022fd484e5f34d0668de935da1694a2e"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "70753d81170dca7326a0e4706739c9d2bfad66afc95e1dbe6845 17080969 no"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "eb9c2fda2d62a871b3dc8cb36c6d365b582c      374 main/installer-s39"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "e/binary-amd64/Release\n fef39480d3c157e0ba8bf102fe4c37b32f7dab6a"..., 4096)                = 4096
+[00007f9940a07603] write(5, "845 17080969 non-free/Contents-mipsel\n 64ca7b8ac298a4cc9ab6f6f63"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "a0d5e22d6a7e35b173d4dcb19dcad49f901f79c4961a168c193f87669f3d46  "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "e4c37b32f7dab6a91b50e47b2a4e424c2321327   234750 non-free/binary"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "307631bf40ef5679275       32 non-free/debian-installer/binary-mi"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "93f87669f3d46    61307 non-free/binary-s390x/Packages.gz\n a6f458"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "22110be6e30adeb8655b7448533a39cbef     2391 non-free/dep11/icons"..., 4096)                 = 2950
+[00007f9940a07603] write(5, "aller/binary-mipsel/Packages.xz\n 32e889dd01e87d5bc03c0ef9bfc6860"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "", 4096)                                                                                    = 0
+[00007f9940a07603] write(5, "ree/dep11/icons-128x128.tar.gz\n b10f854a82350261f92985235a7184e6"..., 1299)               = 1299
+[00007f9940a0c457] close(6)                                                                                             = 0
+[00007f9940a07697] lseek(5, 0, SEEK_SET)                                                                                = 0
+[00007f9940a06ad5] fstat(5, {st_mode=S_IFREG|0600, st_size=144659, ...})                                                = 0
+[00007f9940a0755e] read(5, "Origin: Debian\nLabel: Debian\nSuite: unstable\nCodename: sid\nChang"..., 144662)           = 144659
+[00007f9940a0755e] read(5, "", 3)                                                                                       = 0
+[00007f9940a0d2c7] brk(0x55cf6e7ae000)                                                                                  = 0x55cf6e7ae000
+[00007f9940a07d93] close(5)                                                                                             = 0
+[00007f9940a06a86] stat("/var/lib/apt/lists/deb.debian.org_debian_dists_sid_InRelease", {st_mode=S_IFREG|0644, st_size=146310, ...}) = 0
+[00007f9940a06a86] stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...})                                      = 0
+[00007f99409e4b77] geteuid()                                                                                            = 1000
+[00007f9940a0794a] faccessat(AT_FDCWD, "/tmp", R_OK|W_OK|X_OK)                                                          = 0
+[00007f99409e4b47] getpid()                                                                                             = 3415
+[00007f9940a072c7] openat(AT_FDCWD, "/tmp/clearsigned.message.pWhHqq", O_RDWR|O_CREAT|O_EXCL, 0600)                     = 5
+[00007f9940a09247] unlink("/tmp/clearsigned.message.pWhHqq")                                                            = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/var/lib/apt/lists/deb.debian.org_debian_dists_sid_InRelease", O_RDONLY)           = 6
+[00007f9940a06ad5] fstat(6, {st_mode=S_IFREG|0644, st_size=146310, ...})                                                = 0
+[00007f9940a0755e] read(6, "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nOrigin: Debian\n"..., 4096)             = 4096
+[00007f9940a0755e] read(6, "2 contrib/binary-all/Packages.xz\n e00258bbbf38227aadbea5bf9f08af"..., 4096)                = 4096
+[00007f9940a07603] write(5, "Origin: Debian\nLabel: Debian\nSuite: unstable\nCodename: sid\nChang"..., 4096)            = 4096
+[00007f9940a0755e] read(6, "\n 8dc5aea5b03dff8595f096f9e368e888       32 contrib/debian-insta"..., 4096)                = 4096
+[00007f9940a07603] write(5, "aadbea5bf9f08af11      105 contrib/binary-all/Release\n 120befe50"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "1ff6f7ee80ae4eff0    93316 contrib/dep11/Components-kfreebsd-amd"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ib/debian-installer/binary-amd64/Packages.xz\n 465133a3a391b0f628"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "801c4a8   509763 main/Contents-udeb-amd64\n 659455edf81ba28fbf397"..., 4096)                = 4096
+[00007f9940a07603] write(5, "ts-kfreebsd-amd64.yml\n 18f3faddbae09284fcea1481e3a750dd    11473"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "879d7c96b5cd6fe89857d69efc 44605589 main/binary-ppc64el/Packages"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "edf81ba28fbf39735fd6605db7    40026 main/Contents-udeb-amd64.gz\n"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "s.gz\n dd896f606df7a601a9c75a3da552b8a4    48200 main/debian-inst"..., 4096)                = 4096
+[00007f9940a07603] write(5, "pc64el/Packages\n fcaac54715a2e4ee12b997bf3aefc5a8    27910 main/"..., 4096)               = 4096
+[00007f9940a0755e] read(6, ".bz2\n 9bd5cb899afca5ef019b3dc97f1cb20d     1720 main/i18n/Transl"..., 4096)                = 4096
+[00007f9940a07603] write(5, "ain/debian-installer/binary-s390x/Packages.xz\n 8644bd20faff93a0b"..., 4096)               = 4096
+[00007f9940a0755e] read(6, " cff403341a066cf69b5b179397e074e9    27796 main/i18n/Translation"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ain/i18n/Translation-eo.diff/Index\n ac143382d5cd8a1dd30c1712dddd"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "64/20191129/images/MD5SUMS\n 33e0871447de33c282911a8999b0b041    "..., 4096)                = 4096
+[00007f9940a07603] write(5, "18n/Translation-ru.diff/Index\n 731744fcd0255d4b7454a9118ad0340e "..., 4096)               = 4096
+[00007f9940a0755e] read(6, "i386/current/images/MD5SUMS\n e7fd636b238e02831ea65cad395f0918   "..., 4096)                = 4096
+[00007f9940a07603] write(5, "a8999b0b041    47987 main/installer-arm64/20191129/images/SHA256"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "ler-s390x/20190118/images/SHA256SUMS\n c9a198dcb4c7dc61ce0a3add9e"..., 4096)                = 4096
+[00007f9940a07603] write(5, "5cad395f0918    75734 main/installer-i386/current/images/SHA256S"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "-free/Contents-udeb-armhf\n 4a4dd3598707603b3f76a2378a4504aa     "..., 4096)                = 4096
+[00007f9940a07603] write(5, "7dc61ce0a3add9e2ae6c6      374 main/installer-s390x/20190410/ima"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "z\n 30b1571587ea3e418e360541bf978ba0    62028 non-free/binary-ppc"..., 4096)                = 4096
+[00007f9940a07603] write(5, "378a4504aa       20 non-free/Contents-udeb-armhf.gz\n d41d8cd98f0"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "    32 non-free/debian-installer/binary-s390x/Packages.xz\n e7cee"..., 4096)                = 4096
+[00007f9940a07603] write(5, "free/binary-ppc64el/Packages.xz\n d4aed8973b2fdb4ebe2539a35291133"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "mel.gz\n 84fbe878975c58646bec9ee80fd047b3714463efd10ca86e2a71b0e1"..., 4096)                = 4096
+[00007f9940a07603] write(5, "kages.xz\n e7ceeb59c6faba0761d4bec329d3d26d      108 non-free/deb"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "ade299e1ae30befee90aa5db7049faca4190bf535   124386 contrib/binar"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "10ca86e2a71b0e1cbcc1a07  3007128 contrib/Contents-armhf\n 570771f"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "9097f80e277ad3a05af1f8428ffce1bb52e64bbe6ae3e56f8b2ac22740c     "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "6 contrib/binary-all/Packages\n 1cdbb77dad105af4efa256237a9c1d704"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "rib/debian-installer/binary-i386/Release\n e3b0c44298fc1c149afbf4"..., 4096)                = 4096
+[00007f9940a07603] write(5, "b2ac22740c      108 contrib/binary-mipsel/Release\n 18f55115d599c"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "1b156f5ba11fc95b0d6f4a3aa14558b3ec4eec9578ffeeb30b08d5b   114252"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855       "..., 4096)                = 4096
+[00007f9940a0755e] read(6, "a05bbc07332930    28024 main/Contents-mipsel.diff/Index\n aca05cf"..., 4096)                = 4096
+[00007f9940a07603] write(5, "b08d5b   114252 contrib/dep11/Components-ppc64el.yml\n 743843fc10"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "2d9ec4516dcc884b 10744641 main/binary-arm64/Packages.gz\n 608c22f"..., 4096)                = 4096
+[00007f9940a07603] write(5, "/Index\n aca05cfcfb0838a8ca93a4b0a222ed9b350cb1ad9955cdff63434a8e"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "b332af1c07b9d1b94031a37c912cd9c08514ded72e7b22990d056c2    16761"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "ges.gz\n 608c22f4065a2eeccdf086644b16c3cde03ca1bb65b0bec2b891037b"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "9eaee9b665539956ef860f083f3885b3d69145a8c9bd33dba701039a2c46e00 "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "d056c2    16761 main/debian-installer/binary-all/Packages.gz\n f3"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "b4205b1e325d8ec967c1c851746ed53c934a807f025823f8fbb5    12052 ma"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "701039a2c46e00      106 main/debian-installer/binary-ppc64el/Rel"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "f22c1e0c2028140022c7e43893b8c4e53e6ba7353ddbd457321757240     44"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "bb5    12052 main/i18n/Translation-ca.diff/Index\n 80e9ef72dd6bbe"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "db8e31ea9f13807c89bea030a5652bd73f528d13b303922c16b309  1449460 "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "21757240     4444 main/i18n/Translation-id\n 73f7a183e859a27b0d48"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "df2b51b0892f21859f9f1a5050efc85f1d77d12a7814ea    77595 main/ins"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "6b309  1449460 main/i18n/Translation-sk.bz2\n a2d16dc54b89228145c"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "s/MD5SUMS\n 01e8099c2edf2073af5aadfce51e66c5f1fa2b1bb7d80cb822134"..., 4096)                = 4096
+[00007f9940a07603] write(5, " 77595 main/installer-amd64/20200314/images/SHA256SUMS\n d078f177"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "  624 main/installer-mips64el/20191129/images/MD5SUMS\n 2c16f1f50"..., 4096)                = 4096
+[00007f9940a07603] write(5, "1bb7d80cb822134374915c58e2    73665 main/installer-armhf/2019041"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "t/images/SHA256SUMS\n 64177173eae642cd7473e17236c4eb9c2fda2d62a87"..., 4096)                = 4096
+[00007f9940a07603] write(5, "SUMS\n 2c16f1f5099101a22ad80a659a022fd484e5f34d0668de935da1694a2e"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "70753d81170dca7326a0e4706739c9d2bfad66afc95e1dbe6845 17080969 no"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "eb9c2fda2d62a871b3dc8cb36c6d365b582c      374 main/installer-s39"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "e/binary-amd64/Release\n fef39480d3c157e0ba8bf102fe4c37b32f7dab6a"..., 4096)                = 4096
+[00007f9940a07603] write(5, "845 17080969 non-free/Contents-mipsel\n 64ca7b8ac298a4cc9ab6f6f63"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "a0d5e22d6a7e35b173d4dcb19dcad49f901f79c4961a168c193f87669f3d46  "..., 4096)                 = 4096
+[00007f9940a07603] write(5, "e4c37b32f7dab6a91b50e47b2a4e424c2321327   234750 non-free/binary"..., 4096)                = 4096
+[00007f9940a0755e] read(6, "307631bf40ef5679275       32 non-free/debian-installer/binary-mi"..., 4096)                 = 4096
+[00007f9940a07603] write(5, "93f87669f3d46    61307 non-free/binary-s390x/Packages.gz\n a6f458"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "22110be6e30adeb8655b7448533a39cbef     2391 non-free/dep11/icons"..., 4096)                 = 2950
+[00007f9940a07603] write(5, "aller/binary-mipsel/Packages.xz\n 32e889dd01e87d5bc03c0ef9bfc6860"..., 4096)               = 4096
+[00007f9940a0755e] read(6, "", 4096)                                                                                    = 0
+[00007f9940a07603] write(5, "ree/dep11/icons-128x128.tar.gz\n b10f854a82350261f92985235a7184e6"..., 1299)               = 1299
+[00007f9940a0c457] close(6)                                                                                             = 0
+[00007f9940a07697] lseek(5, 0, SEEK_SET)                                                                                = 0
+[00007f9940a06ad5] fstat(5, {st_mode=S_IFREG|0600, st_size=144659, ...})                                                = 0
+[00007f9940a0755e] read(5, "Origin: Debian\nLabel: Debian\nSuite: unstable\nCodename: sid\nChang"..., 144662)           = 144659
+[00007f9940a0755e] read(5, "", 3)                                                                                       = 0
+[00007f9940a07d93] close(5)                                                                                             = 0
+[00007f9940a0755e] read(4, "", 4096)                                                                                    = 0
+[00007f9940a07d93] close(4)                                                                                             = 0
+[00007f9940a06a86] stat("/etc/apt/sources.list.d/", {st_mode=S_IFDIR|0755, st_size=4096, ...})                          = 0
+[00007f9940a06a86] stat("/etc/apt/sources.list.d/", {st_mode=S_IFDIR|0755, st_size=4096, ...})                          = 0
+[00007f9940a0c5d8] openat(AT_FDCWD, "/etc/apt/sources.list.d/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY)              = 4
+[00007f9940a06ad5] fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...})                                                  = 0
+[00007f99409df347] getdents64(4, /* 2 entries */, 32768)                                                                = 48
+[00007f99409df347] getdents64(4, /* 0 entries */, 32768)                                                                = 0
+[00007f9940a0c457] close(4)                                                                                             = 0
+[00007f9940a072c7] openat(AT_FDCWD, "/var/lib/dpkg/lock-frontend", O_RDWR|O_CREAT|O_NOFOLLOW, 0640)                     = -1 EACCES (Permission denied)
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/libapt-pkg6.0.mo", O_RDONLY)                   = -1 ENOENT (No such file or directory)
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/libapt-pkg6.0.mo", O_RDONLY)                      = -1 ENOENT (No such file or directory)
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/libc.mo", O_RDONLY)                            = -1 ENOENT (No such file or directory)
+[00007f9940a0c5d8] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/libc.mo", O_RDONLY)                               = -1 ENOENT (No such file or directory)
+[00007f9940a07603] write(2, "E", 1)                                                                                     = 1
+[00007f9940a07603] write(2, ": ", 2)                                                                                    = 2
+[00007f9940a07603] write(2, "Could not open lock file /var/lib/dpkg/lock-frontend - open (13:"..., 83)                  = 83
+[00007f9940a07603] write(2, "\n", 1)                                                                                    = 1
+[00007f9940a07603] write(2, "E", 1)                                                                                     = 1
+[00007f9940a07603] write(2, ": ", 2)                                                                                    = 2
+[00007f9940a07603] write(2, "Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-fro"..., 85)                  = 85
+[00007f9940a07603] write(2, "\n", 1)                                                                                    = 1
+[00007f9940a0c457] close(3)                                                                                             = 0
+[00007f99409e4106] exit_group(100)                                                                                      = ?
+[????????????????] +++ exited with 100 +++

@@ -1,0 +1,55 @@
+[00007fbc69021137] execve("/usr/bin/clear", ["clear"], 0x7fffce6357b8 /* 45 vars */)                                    = 0
+[00007f610fd10a27] brk(NULL)                                                                                            = 0x5599fb0e7000
+[00007f610fd11707] access("/etc/ld.so.preload", R_OK)                                                                   = -1 ENOENT (No such file or directory)
+[00007f610fd117f4] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC)                                             = 3
+[00007f610fd11675] fstat(3, {st_mode=S_IFREG|0644, st_size=84162, ...})                                                 = 0
+[00007f610fd119c2] mmap(NULL, 84162, PROT_READ, MAP_PRIVATE, 3, 0)                                                      = 0x7f610fce2000
+[00007f610fd11727] close(3)                                                                                             = 0
+[00007f610fd117f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC)                          = 3
+[00007f610fd118b4] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\351\0\0\0\0\0\0@\0\0\0\0\0\0\0\200\326\2\0\0\0\0\0\0\0\0\0@\08\0\t\0@\0\34\0\33\0"..., 832) = 832
+[00007f610fd11675] fstat(3, {st_mode=S_IFREG|0644, st_size=187776, ...})                                                = 0
+[00007f610fd119c2] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f610fce0000
+[00007f610fd119c2] mmap(NULL, 190848, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f610fcb1000
+[00007f610fd119c2] mmap(0x7f610fcbf000, 57344, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000)     = 0x7f610fcbf000
+[00007f610fd119c2] mmap(0x7f610fccd000, 57344, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000)              = 0x7f610fccd000
+[00007f610fd119c2] mmap(0x7f610fcdb000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000)   = 0x7f610fcdb000
+[00007f610fd11727] close(3)                                                                                             = 0
+[00007f610fd117f4] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC)                              = 3
+[00007f610fd118b4] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 o\2\0\0\0\0\0@\0\0\0\0\0\0\0p\342\33\0\0\0\0\0\0\0\0\0@\08\0\f\0@\0A\0@\0"..., 832) = 832
+[00007f610fd11675] fstat(3, {st_mode=S_IFREG|0755, st_size=1831600, ...})                                               = 0
+[00007f610fd119c2] mmap(NULL, 1844568, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f610faee000
+[00007f610fd119c2] mmap(0x7f610fb13000, 1351680, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000)  = 0x7f610fb13000
+[00007f610fd119c2] mmap(0x7f610fc5d000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16f000)            = 0x7f610fc5d000
+[00007f610fd119c2] mmap(0x7f610fca7000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b8000)  = 0x7f610fca7000
+[00007f610fd119c2] mmap(0x7f610fcad000, 13656, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)        = 0x7f610fcad000
+[00007f610fd11727] close(3)                                                                                             = 0
+[00007f610fd119c2] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                            = 0x7f610faeb000
+[00007f610fcf8b2c] arch_prctl(ARCH_SET_FS, 0x7f610faeb740)                                                              = 0
+[00007f610fd11a67] mprotect(0x7f610fca7000, 12288, PROT_READ)                                                           = 0
+[00007f610fd11a67] mprotect(0x7f610fcdb000, 16384, PROT_READ)                                                           = 0
+[00007f610fd11a67] mprotect(0x5599f95f3000, 4096, PROT_READ)                                                            = 0
+[00007f610fd11a67] mprotect(0x7f610fd1f000, 4096, PROT_READ)                                                            = 0
+[00007f610fd11a47] munmap(0x7f610fce2000, 84162)                                                                        = 0
+[00007f610fbe1b16] ioctl(2, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f610fbe22c7] brk(NULL)                                                                                            = 0x5599fb0e7000
+[00007f610fbe22c7] brk(0x5599fb108000)                                                                                  = 0x5599fb108000
+[00007f610fbdba86] stat("/home/step/.terminfo", 0x5599fb0e74d0)                                                         = -1 ENOENT (No such file or directory)
+[00007f610fbdba86] stat("/etc/terminfo", {st_mode=S_IFDIR|0755, st_size=4096, ...})                                     = 0
+[00007f610fbdba86] stat("/lib/terminfo", {st_mode=S_IFDIR|0755, st_size=4096, ...})                                     = 0
+[00007f610fbdba86] stat("/usr/share/terminfo", {st_mode=S_IFDIR|0755, st_size=4096, ...})                               = 0
+[00007f610fbdc6c7] access("/etc/terminfo/x/xterm-256color", R_OK)                                                       = -1 ENOENT (No such file or directory)
+[00007f610fbdc6c7] access("/lib/terminfo/x/xterm-256color", R_OK)                                                       = 0
+[00007f610fbdc2c7] openat(AT_FDCWD, "/lib/terminfo/x/xterm-256color", O_RDONLY)                                         = 3
+[00007f610fbdbad5] fstat(3, {st_mode=S_IFREG|0644, st_size=3790, ...})                                                  = 0
+[00007f610fbdc55e] read(3, "\36\2%\0&\0\17\0\235\1\34\6xterm-256color|xterm with 256 colors\0\0\1\0\0\1\0\0\0\1\0\0\0\0\1\1"..., 32768) = 3790
+[00007f610fbdc55e] read(3, "", 28672)                                                                                   = 0
+[00007f610fbe1457] close(3)                                                                                             = 0
+[00007f610fbe1b16] ioctl(2, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f610fbe1b16] ioctl(2, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f610fbe1b16] ioctl(2, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f610fbe1b16] ioctl(2, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f610fbe23e7] ioctl(2, TIOCGWINSZ, {ws_row=25, ws_col=185, ws_xpixel=0, ws_ypixel=0})                              = 0
+[00007f610fbdbad5] fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...})                                      = 0
+[00007f610fbdc603] write(1, "\33[H\33[2J\33[3J", 11)                                                                    = 11
+[00007f610fbb9106] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++
