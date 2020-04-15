@@ -62,7 +62,7 @@ install_repo https://github.com/rd235/s2argv-execs.git
 install_repo https://github.com/rd235/strcase.git
 install_repo https://github.com/virtualsquare/vde-2.git -enable-experimental
 install_repo https://github.com/rd235/vdeplug4.git
-install_repo https://github.com/virtualsquare/purelibc.git
+install_repo https://github.com/steppp/purelibc.git
 install_repo https://github.com/rd235/libvolatilestream.git
 install_repo https://github.com/rd235/libstropt.git
 install_repo https://github.com/rd235/libfduserdata.git
@@ -77,7 +77,7 @@ install_repo https://github.com/rd235/vdeplug_agno.git
 install_repo https://github.com/rd235/vdeplug_pcap.git
 install_repo https://github.com/rd235/userbindmount.git
 install_repo https://github.com/rd235/vdens.git
-install_repo https://github.com/virtualsquare/vuos.git
+install_repo https://github.com/steppp/vuos.git
 install_repo https://github.com/virtualsquare/nlinline.git
 install_repo https://github.com/virtualsquare/libnlq.git
 
