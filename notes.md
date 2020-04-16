@@ -1,3 +1,10 @@
+relevant files:
+	- vuos/umvu/include/arch_table.h
+	- vuos/build/umvu_dynsrc/arch_table.h
+	
+syscall numbers are defined as **macros** in _unistd.h_ with the form `__NR_{syscall name}`
+reference: https://elixir.bootlin.com/linux/v5.6.4/source/arch/sh/include/uapi/asm/unistd_64.h
+
 ## How to find an executable entry point
 
 1. launch gdb and load the executable:

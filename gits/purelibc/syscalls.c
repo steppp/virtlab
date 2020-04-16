@@ -61,6 +61,7 @@
 #include "purelibc.h"
 
 /* in case of pre-init call, use syscall */
+/* this `syscall` symbol refers to the native function */
 sfun _pure_syscall = syscall;
 sfun _pure_native_syscall;
 
