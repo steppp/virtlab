@@ -37,5 +37,28 @@ syscall handler to the function obtained as a parameter which is `vu_execute.c:v
 After these intialization steps, the actual tracer function is called at row 455 with `umvu_trace` (that has
 been initialized in `umvu_tracer_fork` as `umvu_tracer_seccomp`, if seccomp is enabled).
 
-**VU_INSMOD** is implemented as a new SC that is captured by _purelibc_ and its number is -1 (defined in
-	`include/vulib.h`)
+**VU_INSMOD** (and others) is implemented as a new SC that is captured by _PTRACE_  and its number is -1
+	(defined in `include/vulib.h`)
+
+`vu_syscalls.conf` is used to generate various files, such as `build/umvu_dynsrc/syscall_table.c` which
+contains two syscall arrays (one for real syscalls and the other for virtual ones) where each SC number is
+associated with its respective **choice** and **wrap** functions, and two syscall names array where each SC
+number is linked to its name, both for real and virtual syscalls.
+
+The **wrap** function is, in the case of virtual SCs, a module-specific function implementation that should
+be declared and provided a default body in `include/vulib.h` while its actual implementation should be placed
+in `umvu/src/vu_vwrap_vumgmt.c`.
+Here the name of the desired module is retrieved by peeking the SC's registers and then the method calls
+`vu_modutils.c:module_load(name)` that in turns calls `module_dlopen`. This last function performs the
+actual dlopen-ing of the library trying to find it in multiple paths.
+After that, `module_load` *dlsym-s* the **vu_module** field of the loaded module to get its name description
+and loads all the syscalls implemented by this module in _service->module_syscalls[]_ searching their name 
+in the module just loaded with _dlopen_. See `vuos/umvu/include/service.h` for more info about the
+_vu_module_ struct.
+Its type should be void, and it should accept two parameters, a *vuht_entry_t* and a *syscall_descriptor_t*
+The **choice** function process the actual arguments of a system call request and returns the pointer to the
+hash table entry which is responsible to handle the request. When a choice function returns NULL it means
+that the request has not to be virtualized, so it is forwarded to the kernel.
+See more in `vuos/umvu/include/syscall_table.h`.
+
+
