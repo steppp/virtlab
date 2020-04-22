@@ -53,8 +53,9 @@ Here the name of the desired module is retrieved by peeking the SC's registers a
 actual dlopen-ing of the library trying to find it in multiple paths.
 After that, `module_load` *dlsym-s* the **vu_module** field of the loaded module to get its name description
 and loads all the syscalls implemented by this module in _service->module_syscalls[]_.
-To achieve this, the method tries to _dlsym_ every function whose name is a SC's one obtained by iterating
-on the `vu_syscall_names` array. If the _dlsym_operation_ succeeds the function pointer is saved in the
+To achieve this, the method appends every element in the `vu_syscall_names` array to a string with the
+*vu_* prefix, followed by the module name and an underscore. It then tries to _dlsym_ every symbol obtained in
+such a way using the module loaded library. If the operation succeeds the function pointer is saved in the
 previously mentioned data structure which is then returned and saved in a _vu_service_t_ pointer variable.
 This variable is then used to lead the module specific _cleanup_ function and then everything is added to the
 _services hast table_ with `vuos/umvu/src/hashtable.c/vuht_add` and the same entry is saved in the _service_
@@ -69,8 +70,9 @@ It is called in `vu_execute.c:vu_syscall_execute` after being retrieved by acces
 `umvu_dynsrc/syscall_table.c:vvu_syscall_table` using the reciprocal of the vSC number and it returns a 
 `umvu/include/syscall_defs.h:vsyscall_tab_entry` struct that contains a _choicef_t_ and a _wrapf_t_ pointer.
 The **choice** function process the actual arguments of a system call request and returns the pointer to the
-hash table entry which is responsible to handle the request. When a choice function returns NULL it means
-that the request has not to be virtualized, so it is forwarded to the kernel.
+hash table entry which is responsible to handle the request.
+[ When a choice function returns NULL it means that the request has not to be virtualized, so it is forwarded
+to the kernel. ? ]
 See more in `vuos/umvu/include/syscall_table.h`.
 
 
