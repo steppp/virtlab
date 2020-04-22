@@ -52,10 +52,22 @@ Here the name of the desired module is retrieved by peeking the SC's registers a
 `vu_modutils.c:module_load(name)` that in turns calls `module_dlopen`. This last function performs the
 actual dlopen-ing of the library trying to find it in multiple paths.
 After that, `module_load` *dlsym-s* the **vu_module** field of the loaded module to get its name description
-and loads all the syscalls implemented by this module in _service->module_syscalls[]_ searching their name 
-in the module just loaded with _dlopen_. See `vuos/umvu/include/service.h` for more info about the
-_vu_module_ struct.
-Its type should be void, and it should accept two parameters, a *vuht_entry_t* and a *syscall_descriptor_t*
+and loads all the syscalls implemented by this module in _service->module_syscalls[]_.
+To achieve this, the method tries to _dlsym_ every function whose name is a SC's one obtained by iterating
+on the `vu_syscall_names` array. If the _dlsym_operation_ succeeds the function pointer is saved in the
+previously mentioned data structure which is then returned and saved in a _vu_service_t_ pointer variable.
+This variable is then used to lead the module specific _cleanup_ function and then everything is added to the
+_services hast table_ with `vuos/umvu/src/hashtable.c/vuht_add` and the same entry is saved in the _service_
+variable that is then used to load and call the **init** function for that specific module.
+The list of syscalls names is dinamically generated and the array containing all their names is defined in
+`vuos/build/umvu_dynsrc/syscall_table.c`.
+See `vuos/umvu/include/service.h` for more info about the _vu_module_ struct.
+The wrap function type should be void, and it should accept two parameters, a *vuht_entry_t* and a
+*syscall_descriptor_t*. The *vuht_entry_t* is a reference to an HASH TABLE entry that is returned from the
+_choice_ function but it is always NULL in the case of vSCs (except for _msocket_).
+It is called in `vu_execute.c:vu_syscall_execute` after being retrieved by accessing the
+`umvu_dynsrc/syscall_table.c:vvu_syscall_table` using the reciprocal of the vSC number and it returns a 
+`umvu/include/syscall_defs.h:vsyscall_tab_entry` struct that contains a _choicef_t_ and a _wrapf_t_ pointer.
 The **choice** function process the actual arguments of a system call request and returns the pointer to the
 hash table entry which is responsible to handle the request. When a choice function returns NULL it means
 that the request has not to be virtualized, so it is forwarded to the kernel.
