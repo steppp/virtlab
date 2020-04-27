@@ -67,7 +67,7 @@ che la contiene viene caricato, comportamento duale per *__attribute((destructor
 		- short l_whence: punto di partenza di l_start (SEEK_SET - inizio del file, SEEK_CUR - posizione corrente, SEEK_END - fine del file)
 		- off_t l_start: offset inziale per il lock
 		- off_t l_len: lunghezza per il lock, se = 0 allora vengono considerati tutti i byte da l_start alla fine del file, può essere negativa se
-			l_whence = SEEK_CUR o SEEK_END
+			l_whence = SEEK_CUR o SEEK_END _
 - **lockf(_int fd_, _int cmd_, _off_t len_)**: INTERFACCIA SOPRA A **fcntl**
 	i possibili valori di cmd sono:
 		- F_LOCK: applica un lock esclusivo alla regione specificata del file, mettendosi in attesa del rilascio di eventuali lock già esistenti
@@ -92,6 +92,14 @@ il lock ovviamente dovrebbe essere applicato solamente in seguito all'apertura d
 		-> overhead per TUTTE le sc open, non praticabile
 	- comportamento standard, a meno che non sia presente un modulo che fornisce una descrizione del file desiderato
 		con valori predefiniti/personalizzabili
+
+**COME RISOLVERE QUESTO PROBLEMA**
+	- lanciare i comandi nell'ordine descritto nel file `vu_cmds.txt`
+	- l'installazione non ha comunque successo, ma gli errori generati cambiano (vedi `install_err.txt`)
+	- i primi errori che emergono sono dovuti all'impossibilità di eseguire la SC **setgroups**
+		(https://salsa.debian.org/apt-team/apt/-/blob/master/apt-pkg/acquire.cc righe 632,679 e
+		https://salsa.debian.org/apt-team/apt/-/blob/master/apt-pkg/contrib/fileutl.cc riga 3295)
+
 
 work-around che risolve il problema dell'apertura del file di lock /var/lib/dpkg/lock-frontend:
 	-> montare il fs virtuale usando VUFS con il comando `vumount -t vufs -o cow (anche mincow va bene?) {src} /`
