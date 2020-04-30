@@ -1,0 +1,69 @@
+[00007f18b9435be7] set_robust_list(0x7f18b942d6e0, 24)                                                                  = 0
+[00007f18b95f89fb] chdir("/")                                                                                           = 0
+[00007f18b95cd16b] execve("/var/lib/dpkg/info/man-db.postinst", ["/var/lib/dpkg/info/man-db.postin"..., "triggered", "/usr/share/man"], 0x5617f95aaf90 /* 40 vars */) = 0
+[00007f50e59ebeab] brk(NULL)                                                                                            = 0x5620c043f000
+[00007f50e59eab55] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc11993c10)                                                    = -1 EINVAL (Invalid argument)
+[00007f50e59ecd5b] access("/etc/ld.so.preload", R_OK)                                                                   = -1 ENOENT (No such file or directory)
+[00007f50e59ecec8] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC)                                             = 3
+[00007f50e59ecc99] fstat(3, {st_mode=S_IFREG|0644, st_size=71809, ...})                                                 = 0
+[00007f50e59ed0e6] mmap(NULL, 71809, PROT_READ, MAP_PRIVATE, 3, 0)                                                      = 0x7f50e59bc000
+[00007f50e59ecd8b] close(3)                                                                                             = 0
+[00007f50e59ecec8] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC)                              = 3
+[00007f50e59ecf88] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832)                   = 832
+[00007f50e59ecfbe] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64)              = 784
+[00007f50e59ecfbe] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848)              = 32
+[00007f50e59ecfbe] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0cBR\340\305\370\2609W\242\345)q\235A\1"..., 68, 880)       = 68
+[00007f50e59ecc99] fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...})                                               = 0
+[00007f50e59ed0e6] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f50e59ba000
+[00007f50e59ecfbe] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64)              = 784
+[00007f50e59ecfbe] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848)              = 32
+[00007f50e59ecfbe] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0cBR\340\305\370\2609W\242\345)q\235A\1"..., 68, 880)       = 68
+[00007f50e59ed0e6] mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f50e57c8000
+[00007f50e59ed19b] mprotect(0x7f50e57ed000, 1847296, PROT_NONE)                                                         = 0
+[00007f50e59ed0e6] mmap(0x7f50e57ed000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000)  = 0x7f50e57ed000
+[00007f50e59ed0e6] mmap(0x7f50e5965000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000)            = 0x7f50e5965000
+[00007f50e59ed0e6] mmap(0x7f50e59b0000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000)  = 0x7f50e59b0000
+[00007f50e59ed0e6] mmap(0x7f50e59b6000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)        = 0x7f50e59b6000
+[00007f50e59ecd8b] close(3)                                                                                             = 0
+[00007f50e59cfcc0] arch_prctl(ARCH_SET_FS, 0x7f50e59bb580)                                                              = 0
+[00007f50e59ed19b] mprotect(0x7f50e59b0000, 12288, PROT_READ)                                                           = 0
+[00007f50e59ed19b] mprotect(0x5620bf46d000, 8192, PROT_READ)                                                            = 0
+[00007f50e59ed19b] mprotect(0x7f50e59fb000, 4096, PROT_READ)                                                            = 0
+[00007f50e59ed16b] munmap(0x7f50e59bc000, 71809)                                                                        = 0
+[00007f50e58af0db] getuid()                                                                                             = 0
+[00007f50e58af0fb] getgid()                                                                                             = 0
+[00007f50e58af0bb] getpid()                                                                                             = 5286
+[00007f50e580e2e6] rt_sigaction(SIGCHLD, {sa_handler=0x5620bf462c30, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f50e580e210}, NULL, 8) = 0
+[00007f50e58af0eb] geteuid()                                                                                            = 0
+[00007f50e58df25b] brk(NULL)                                                                                            = 0x5620c043f000
+[00007f50e58df25b] brk(0x5620c0460000)                                                                                  = 0x5620c0460000
+[00007f50e58af0cb] getppid()                                                                                            = 5273
+[00007f50e58d849a] stat("/home/stefano/dpkgstrace", {st_mode=S_IFDIR|0755, st_size=4096, ...})                          = 0
+[00007f50e58d849a] stat(".", {st_mode=S_IFDIR|0755, st_size=4096, ...})                                                 = 0
+[00007f50e58d9ad2] getcwd("/", 4096)                                                                                    = 2
+[00007f50e58d8d1b] openat(AT_FDCWD, "/var/lib/dpkg/info/man-db.postinst", O_RDONLY)                                     = 3
+[00007f50e58de414] fcntl(3, F_DUPFD, 10)                                                                                = 10
+[00007f50e58d97f7] close(3)                                                                                             = 0
+[00007f50e58de414] fcntl(10, F_SETFD, FD_CLOEXEC)                                                                       = 0
+[00007f50e58af0eb] geteuid()                                                                                            = 0
+[00007f50e58af10b] getegid()                                                                                            = 0
+[00007f50e580e2e6] rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8)                          = 0
+[00007f50e580e2e6] rt_sigaction(SIGINT, {sa_handler=0x5620bf462c30, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f50e580e210}, NULL, 8) = 0
+[00007f50e580e2e6] rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8)                         = 0
+[00007f50e580e2e6] rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f50e580e210}, NULL, 8) = 0
+[00007f50e580e2e6] rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8)                         = 0
+[00007f50e580e2e6] rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f50e580e210}, NULL, 8) = 0
+[00007f50e58d8fb2] read(10, "#!/bin/sh\nset -e\n\ncatdir=/var/ca"..., 8192)                                             = 5041
+[00007f50e58d849a] stat("/var/cache/man", {st_mode=S_IFDIR|0755, st_size=4096, ...})                                    = 0
+[00007f50e58d849a] stat("/var/lib/man-db/auto-update", {st_mode=S_IFREG|0644, st_size=0, ...})                          = 0
+[00007f50e58d849a] stat("/usr/local/sbin/perl", 0x7ffc119935e0)                                                         = -1 ENOENT (No such file or directory)
+[00007f50e58d849a] stat("/usr/local/bin/perl", 0x7ffc119935e0)                                                          = -1 ENOENT (No such file or directory)
+[00007f50e58d849a] stat("/usr/sbin/perl", 0x7ffc119935e0)                                                               = -1 ENOENT (No such file or directory)
+[00007f50e58d849a] stat("/usr/bin/perl", {st_mode=S_IFREG|0755, st_size=3474368, ...})                                  = 0
+[00007f50e58adf2f] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f50e59bb850) = 5287
+[00007f50e58adc2a] wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL)                                          = 5287
+[00007f50e58adc2a] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5287, si_uid=6, si_status=0, si_utime=14, si_stime=20} ---
+[00007f50e580e219] rt_sigreturn({mask=[]})                                                                              = 5287
+[00007f50e58adc2a] wait4(-1, 0x7ffc1199377c, WNOHANG, NULL)                                                             = -1 ECHILD (No child processes)
+[00007f50e58ae136] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++

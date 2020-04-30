@@ -1,0 +1,36 @@
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fba9c8ab] dup2(5, 0)                                                                                           = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c8ab] dup2(7, 1)                                                                                           = 1
+[00007fa0fba9c7f7] close(7)                                                                                             = 0
+[00007fa0fba9c7f7] close(6)                                                                                             = 0
+[00007fa0fbaadd0e] prctl(PR_GET_SECCOMP)                                                                                = 0
+[00007fa0fbaa225b] brk(0x560dd18ff000)                                                                                  = 0x560dd18ff000
+[00007fa0fbaadd0e] prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0)                                                               = 0
+[00007fa0fbaa670d] seccomp(SECCOMP_SET_MODE_STRICT, 1, NULL)                                                            = -1 EINVAL (Invalid argument)
+[00007fa0fbaa670d] seccomp(SECCOMP_SET_MODE_FILTER, 0, {len=527, filter=0x560dd18e3770})                                = 0
+[00007fa0fba9c87b] dup(0)                                                                                               = 5
+[00007fa0fba9c0eb] lseek(5, 0, SEEK_CUR)                                                                                = 0
+[00007fa0fba9bfb2] read(5, "\37\213\10\0\0\0\0\0\2\3\264[\373w\23G\226\376Y\365WT\24O,C\253\221\4\223\205p"..., 8192)   = 8192
+[00007fa0fba9b4f9] fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...})                                                     = 0
+[00007fa0fba9c057] write(1, ".\\\" $MawkId: mawk.1,v 1.36 2019/"..., 4096)                                              = 4096
+[00007fa0fba9c057] write(1, "\n.TP\n\\-\\fBW \\fRhelp\nprints a usa"..., 4096)                                          = 4096
+[00007fa0fba9c057] write(1, "enced\nand are initialized to\n.IR"..., 4096)                                              = 4096
+[00007fa0fba9bfb2] read(5, "\203\31\343T\371\226\327\247A\7C\5(U\303Q!v\300\313\252n\353\243\235\265\265\227\264d\313p"..., 8192) = 7524
+[00007fa0fba9bfb2] read(5, "", 668)                                                                                     = 0
+[00007fa0fba9c057] write(1, "u\n(alternation).\n.TP\n\\fIr\\fR*\nma"..., 4096)                                          = 4096
+[00007fa0fba9c057] write(1, " \\fIvar\\fB in \\fIarray \\fR) \\fIs"..., 4096)                                           = 4096
+[00007fa0fba9c057] write(1, "n\\fR)\nconverts a date specificat"..., 4096)                                              = 4096
+[00007fa0fba9c057] write(1, " file\ninto\n.IR var .\n.TP\n\\fIcomm"..., 4096)                                           = 4096
+[00007fa0fba9c057] write(1, "If\n.B $0\nis empty,\n.B NF\nis set "..., 4096)                                            = 4096
+[00007fa0fba9c057] write(1, "y record between the match of\n.I"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, " separator\nregardless of the val"..., 4096)                                               = 4096
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c057] write(1, "\n.bP\nEvery string, including the"..., 2896)                                              = -1 EPIPE (Broken pipe)
+[00007fa0fba9c057] --- SIGPIPE {si_signo=SIGPIPE, si_code=SI_USER, si_pid=5408, si_uid=6} ---
+[????????????????] +++ killed by SIGPIPE +++

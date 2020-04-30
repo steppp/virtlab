@@ -1,0 +1,41 @@
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fba9c8ab] dup2(5, 0)                                                                                           = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c8ab] dup2(7, 1)                                                                                           = 1
+[00007fa0fba9c7f7] close(7)                                                                                             = 0
+[00007fa0fba9c7f7] close(6)                                                                                             = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = -1 EBADF (Bad file descriptor)
+[00007fa0fbaadd0e] prctl(PR_GET_SECCOMP)                                                                                = 2
+[00007fa0fba9c87b] dup(0)                                                                                               = 5
+[00007fa0fba9c0eb] lseek(5, 0, SEEK_CUR)                                                                                = -1 ESPIPE (Illegal seek)
+[00007fa0fba9bfb2] read(5, "'\\\" t\n.\\\"\n.\\\" Author: Lasse Coll"..., 8192)                                         = 8192
+[00007fa0fba9b4f9] fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...})                                                     = 0
+[00007fa0fba9c057] write(1, "'\\\" t\n.\\\"\n.\\\" Author: Lasse Coll"..., 4096)                                        = 4096
+[00007fa0fba9bfb2] read(5, "R \\-l \", \" \\-\\-list\nPrint inform"..., 16384)                                          = 16384
+[00007fa0fba9c057] write(1, "ttings used when compressing a f"..., 4096)                                                = 4096
+[00007fa0fba9c057] write(1, "R \\-l \", \" \\-\\-list\nPrint inform"..., 4096)                                          = 4096
+[00007fa0fba9c057] write(1, "re the filenames read from\n.IR f"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "y 16\\ MiB RAM.\n.RB ( \\-5e\nor\n.B "..., 4096)                                           = 4096
+[00007fa0fba9bfb2] read(5, "ared between different computers"..., 16384)                                                = 16384
+[00007fa0fba9c057] write(1, "e times\n.I size\nbytes will be al"..., 4096)                                              = 4096
+[00007fa0fba9c057] write(1, "ared between different computers"..., 4096)                                                = 4096
+[00007fa0fba9c057] write(1, "e filter chain and\n.IR options ,"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "a is\nassumed in general.\nThe def"..., 4096)                                              = 4096
+[00007fa0fba9bfb2] read(5, "\"\"\nThe progress indicator shows "..., 16384)                                             = 16384
+[00007fa0fba9c057] write(1, "reversible,\nso using a BCJ filte"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "\"\"\nThe progress indicator shows "..., 4096)                                             = 4096
+[00007fa0fba9c057] write(1, "tting,\nwhich for single-threaded"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, " options\nthat are needed for dec"..., 4096)                                               = 4096
+[00007fa0fba9bfb2] read(5, "press the file\n.I foo\ninto\n.I fo"..., 16384)                                             = 7299
+[00007fa0fba9bfb2] read(5, "", 9085)                                                                                    = 0
+[00007fa0fba9c057] write(1, "2 MiB\n\\-2;17 MiB;12 MiB\n\\-3;32 M"..., 4096)                                            = 4096
+[00007fa0fba9c057] write(1, "press the file\n.I foo\ninto\n.I fo"..., 4096)                                             = 4096
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c057] write(1, "pressor memory usage is fine,\nan"..., 3203)                                               = 3203
+[00007fa0fba71136] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++

@@ -1,0 +1,42 @@
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fba9c8ab] dup2(5, 0)                                                                                           = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c8ab] dup2(7, 1)                                                                                           = 1
+[00007fa0fba9c7f7] close(7)                                                                                             = 0
+[00007fa0fba9c7f7] close(6)                                                                                             = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = -1 EBADF (Bad file descriptor)
+[00007fa0fbaadd0e] prctl(PR_GET_SECCOMP)                                                                                = 2
+[00007fa0fba9c87b] dup(0)                                                                                               = 5
+[00007fa0fba9c0eb] lseek(5, 0, SEEK_CUR)                                                                                = -1 ESPIPE (Illegal seek)
+[00007fa0fba9bfb2] read(5, ".\\\" Copyright (c) 1991, 1993\n.\\\""..., 8192)                                            = 8192
+[00007fa0fba9b4f9] fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...})                                                     = 0
+[00007fa0fba9c057] write(1, ".\\\" Copyright (c) 1991, 1993\n.\\\""..., 4096)                                           = 4096
+[00007fa0fba9bfb2] read(5, "\npopen(3).\n.El\n.Ss Lexical Struc"..., 16384)                                             = 16384
+[00007fa0fba9c057] write(1, "eractive shell.\nAn interactive s"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "\npopen(3).\n.El\n.Ss Lexical Struc"..., 4096)                                             = 4096
+[00007fa0fba9c057] write(1, " close, or duplicate an\nexisting"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "irectory may be indicated\nimplic"..., 4096)                                               = 4096
+[00007fa0fba9bfb2] read(5, "tional parameter is a parameter "..., 16384)                                                = 16384
+[00007fa0fba9c057] write(1, "if and only if the exit status\no"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "tional parameter is a parameter "..., 4096)                                                = 4096
+[00007fa0fba9c057] write(1, "thname expansion is not performe"..., 4096)                                                = 4096
+[00007fa0fba9c057] write(1, "shell expands all tokens in the "..., 4096)                                                = 4096
+[00007fa0fba9bfb2] read(5, "ommand number.\n.It Fl n\nSuppress"..., 16384)                                              = 16384
+[00007fa0fba9c057] write(1, "e pathname\nof utilities, the nam"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "ommand number.\n.It Fl n\nSuppress"..., 4096)                                              = 4096
+[00007fa0fba9c057] write(1, "he hash table\nexcept for functio"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "printed in an ``alternative form"..., 4096)                                                = 4096
+[00007fa0fba9bfb2] read(5, "tring\nTrue if\n.Ar string\nis not "..., 16384)                                             = 9734
+[00007fa0fba9bfb2] read(5, "", 6650)                                                                                    = 0
+[00007fa0fba9c057] write(1, "e truncation of\na field; padding"..., 4096)                                               = 4096
+[00007fa0fba9c057] write(1, "tring\nTrue if\n.Ar string\nis not "..., 4096)                                             = 4096
+[00007fa0fba9c057] write(1, "in seconds)\n.It Fl f\nshow or set"..., 4096)                                              = 4096
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c057] write(1, "\n.Dq #\\  .\n.It Ev PS2\nThe second"..., 1542)                                            = 1542
+[00007fa0fba71136] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++

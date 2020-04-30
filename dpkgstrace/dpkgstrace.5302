@@ -1,0 +1,41 @@
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fba9c8ab] dup2(6, 0)                                                                                           = 0
+[00007fa0fba9c7f7] close(6)                                                                                             = 0
+[00007fa0fba9c8ab] dup2(7, 1)                                                                                           = 1
+[00007fa0fba9c7f7] close(7)                                                                                             = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fbaadd0e] prctl(PR_GET_SECCOMP)                                                                                = 0
+[00007fa0fbaa225b] brk(0x560dd18ff000)                                                                                  = 0x560dd18ff000
+[00007fa0fbaadd0e] prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0)                                                               = 0
+[00007fa0fbaa670d] seccomp(SECCOMP_SET_MODE_STRICT, 1, NULL)                                                            = -1 EINVAL (Invalid argument)
+[00007fa0fbaa670d] seccomp(SECCOMP_SET_MODE_FILTER, 0, {len=527, filter=0x560dd18e0f30})                                = 0
+[00007fa0fba9c87b] dup(0)                                                                                               = 5
+[00007fa0fb9d148b] rt_sigprocmask(SIG_BLOCK, [CHLD], [CHLD], 8)                                                         = 0
+[00007fa0fb9d148b] rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8)                                                         = 0
+[00007fa0fba9c90b] pipe([6, 7])                                                                                         = 0
+[00007fa0fb9d148b] rt_sigprocmask(SIG_BLOCK, [CHLD], [CHLD], 8)                                                         = 0
+[00007fa0fba70f2f] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa0fb933a10) = 5303
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c7f7] close(7)                                                                                             = 0
+[00007fa0fb9d148b] rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8)                                                         = 0
+[00007fa0fba9bfb2] read(6, ".TH PS2PDF 1 \"15 October 2019\" 9"..., 4096)                                               = 2807
+[00007fa0fbaa14cc] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY)                    = 5
+[00007fa0fba9b4f9] fstat(5, {st_mode=S_IFREG|0644, st_size=27002, ...})                                                 = 0
+[00007fa0fbaa68b6] mmap(NULL, 27002, PROT_READ, MAP_SHARED, 5, 0)                                                       = 0x7fa0fbbc5000
+[00007fa0fbaa131b] close(5)                                                                                             = 0
+[00007fa0fba9bfb2] read(6, "", 62729)                                                                                   = 0
+[00007fa0fba9bfb2] read(6, "", 62729)                                                                                   = 0
+[00007fa0fbaa225b] brk(0x560dd1921000)                                                                                  = 0x560dd1921000
+[00007fa0fba9b4f9] fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...})                                                     = 0
+[00007fa0fba9bfb2] read(6, "", 65536)                                                                                   = 0
+[00007fa0fba9bfb2] read(6, "", 65536)                                                                                   = 0
+[00007fa0fba9c7f7] close(6)                                                                                             = 0
+[00007fa0fba70c2a] wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL)                                          = 5303
+[00007fa0fba9c057] write(1, ".TH PS2PDF 1 \"15 October 2019\" 9"..., 2807)                                              = 2807
+[00007fa0fba71136] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++

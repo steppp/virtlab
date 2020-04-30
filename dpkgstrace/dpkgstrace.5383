@@ -1,0 +1,24 @@
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fba9c8ab] dup2(5, 0)                                                                                           = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c8ab] dup2(7, 1)                                                                                           = 1
+[00007fa0fba9c7f7] close(7)                                                                                             = 0
+[00007fa0fba9c7f7] close(6)                                                                                             = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = -1 EBADF (Bad file descriptor)
+[00007fa0fbaadd0e] prctl(PR_GET_SECCOMP)                                                                                = 2
+[00007fa0fba9c87b] dup(0)                                                                                               = 5
+[00007fa0fba9c0eb] lseek(5, 0, SEEK_CUR)                                                                                = -1 ESPIPE (Illegal seek)
+[00007fa0fba9bfb2] read(5, ".TH HOSTNAME 1 \"2009-09-16\" \"net"..., 8192)                                              = 4096
+[00007fa0fba9bfb2] read(5, "This option enumerates all confi"..., 4096)                                                 = 3277
+[00007fa0fba9bfb2] read(5, "", 819)                                                                                     = 0
+[00007fa0fba9b4f9] fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...})                                                     = 0
+[00007fa0fba9c057] write(1, ".TH HOSTNAME 1 \"2009-09-16\" \"net"..., 4096)                                             = 4096
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c057] write(1, "This option enumerates all confi"..., 3277)                                                = 3277
+[00007fa0fba71136] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++
