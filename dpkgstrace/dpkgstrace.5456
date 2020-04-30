@@ -1,0 +1,25 @@
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGHUP, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGINT, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, NULL, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, 8) = 0
+[00007fa0fb9d12e6] rt_sigaction(SIGTERM, {sa_handler=0x7fa0fbbd7830, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa0fb9d1210}, NULL, 8) = 0
+[00007fa0fba9c8ab] dup2(5, 0)                                                                                           = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c8ab] dup2(7, 1)                                                                                           = 1
+[00007fa0fba9c7f7] close(7)                                                                                             = 0
+[00007fa0fba9c7f7] close(6)                                                                                             = 0
+[00007fa0fbaadd0e] prctl(PR_GET_SECCOMP)                                                                                = 0
+[00007fa0fbaa225b] brk(0x560dd18ff000)                                                                                  = 0x560dd18ff000
+[00007fa0fbaadd0e] prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0)                                                               = 0
+[00007fa0fbaa670d] seccomp(SECCOMP_SET_MODE_STRICT, 1, NULL)                                                            = -1 EINVAL (Invalid argument)
+[00007fa0fbaa670d] seccomp(SECCOMP_SET_MODE_FILTER, 0, {len=527, filter=0x560dd18e51f0})                                = 0
+[00007fa0fba9c87b] dup(0)                                                                                               = 5
+[00007fa0fba9c0eb] lseek(5, 0, SEEK_CUR)                                                                                = 0
+[00007fa0fba9bfb2] read(5, "\37\213\10\0\0\0\0\0\2\3\245WQs\3336\22~\16~\305\216\373\20g*\261\223\231>yz"..., 8192)     = 1682
+[00007fa0fba9bfb2] read(5, "", 6510)                                                                                    = 0
+[00007fa0fba9b4f9] fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...})                                                     = 0
+[00007fa0fba9c7f7] close(5)                                                                                             = 0
+[00007fa0fba9c057] write(1, ".TH PYGETTEXT 1 \"\" \"pygettext 1."..., 3772)                                             = 3772
+[00007fa0fba71136] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++

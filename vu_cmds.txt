@@ -1,6 +1,0 @@
-> vu_insmod unrealuidgid vufs
-> vusu
-
-$ mkdir -p /tmp/newroot/var/cache/apt/archives/partial
-$ vumount -t vufs -o cow /tmp/newroot /
-$ rm -rf /var/lib/dpkg/lock-frontend

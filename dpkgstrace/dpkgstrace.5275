@@ -1,0 +1,141 @@
+[00007f18b9435be7] set_robust_list(0x7f18b942d6e0, 24)                                                                  = 0
+[00007f18b95cd16b] execve("/usr/local/sbin/dpkg-deb", ["dpkg-deb", "--control", "../tinyirc_1%3a1.1.dfsg.1-3build"..., "/var/lib/dpkg/tmp.ci"], 0x5617f88abf10 /* 34 vars */) = -1 ENOENT (No such file or directory)
+[00007f18b95cd16b] execve("/usr/local/bin/dpkg-deb", ["dpkg-deb", "--control", "../tinyirc_1%3a1.1.dfsg.1-3build"..., "/var/lib/dpkg/tmp.ci"], 0x5617f88abf10 /* 34 vars */) = -1 ENOENT (No such file or directory)
+[00007f18b95cd16b] execve("/usr/sbin/dpkg-deb", ["dpkg-deb", "--control", "../tinyirc_1%3a1.1.dfsg.1-3build"..., "/var/lib/dpkg/tmp.ci"], 0x5617f88abf10 /* 34 vars */) = -1 ENOENT (No such file or directory)
+[00007f18b95cd16b] execve("/usr/bin/dpkg-deb", ["dpkg-deb", "--control", "../tinyirc_1%3a1.1.dfsg.1-3build"..., "/var/lib/dpkg/tmp.ci"], 0x5617f88abf10 /* 34 vars */) = 0
+[00007f6f78f9eeab] brk(NULL)                                                                                            = 0x555763b5f000
+[00007f6f78f9db55] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffdbc0aae10)                                                    = -1 EINVAL (Invalid argument)
+[00007f6f78f9fd5b] access("/etc/ld.so.preload", R_OK)                                                                   = -1 ENOENT (No such file or directory)
+[00007f6f78f9fec8] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC)                                             = 3
+[00007f6f78f9fc99] fstat(3, {st_mode=S_IFREG|0644, st_size=71809, ...})                                                 = 0
+[00007f6f78fa00e6] mmap(NULL, 71809, PROT_READ, MAP_PRIVATE, 3, 0)                                                      = 0x7f6f78f6f000
+[00007f6f78f9fd8b] close(3)                                                                                             = 0
+[00007f6f78f9fec8] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC)                              = 3
+[00007f6f78f9ff88] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\"\0\0\0\0\0\0"..., 832)                  = 832
+[00007f6f78f9fc99] fstat(3, {st_mode=S_IFREG|0644, st_size=108936, ...})                                                = 0
+[00007f6f78fa00e6] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f6f78f6d000
+[00007f6f78fa00e6] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f6f78f51000
+[00007f6f78fa019b] mprotect(0x7f6f78f53000, 98304, PROT_NONE)                                                           = 0
+[00007f6f78fa00e6] mmap(0x7f6f78f53000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000)     = 0x7f6f78f53000
+[00007f6f78fa00e6] mmap(0x7f6f78f64000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000)              = 0x7f6f78f64000
+[00007f6f78fa00e6] mmap(0x7f6f78f6b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000)    = 0x7f6f78f6b000
+[00007f6f78f9fd8b] close(3)                                                                                             = 0
+[00007f6f78f9fec8] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libzstd.so.1", O_RDONLY|O_CLOEXEC)                           = 3
+[00007f6f78f9ff88] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@B\0\0\0\0\0\0"..., 832)                      = 832
+[00007f6f78f9fc99] fstat(3, {st_mode=S_IFREG|0644, st_size=686160, ...})                                                = 0
+[00007f6f78fa00e6] mmap(NULL, 688192, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f6f78ea8000
+[00007f6f78fa00e6] mmap(0x7f6f78eac000, 598016, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000)    = 0x7f6f78eac000
+[00007f6f78fa00e6] mmap(0x7f6f78f3e000, 69632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x96000)              = 0x7f6f78f3e000
+[00007f6f78fa00e6] mmap(0x7f6f78f4f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa6000)    = 0x7f6f78f4f000
+[00007f6f78f9fd8b] close(3)                                                                                             = 0
+[00007f6f78f9fec8] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC)                           = 3
+[00007f6f78f9ff88] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0002\0\0\0\0\0\0"..., 832)                   = 832
+[00007f6f78f9fc99] fstat(3, {st_mode=S_IFREG|0644, st_size=153912, ...})                                                = 0
+[00007f6f78fa00e6] mmap(NULL, 155912, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f6f78e81000
+[00007f6f78fa00e6] mmap(0x7f6f78e84000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000)     = 0x7f6f78e84000
+[00007f6f78fa00e6] mmap(0x7f6f78e9b000, 45056, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000)              = 0x7f6f78e9b000
+[00007f6f78fa00e6] mmap(0x7f6f78ea6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000)    = 0x7f6f78ea6000
+[00007f6f78f9fd8b] close(3)                                                                                             = 0
+[00007f6f78f9fec8] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbz2.so.1.0", O_RDONLY|O_CLOEXEC)                          = 3
+[00007f6f78f9ff88] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@\"\0\0\0\0\0\0"..., 832)                     = 832
+[00007f6f78f9fc99] fstat(3, {st_mode=S_IFREG|0644, st_size=74848, ...})                                                 = 0
+[00007f6f78fa00e6] mmap(NULL, 76840, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                        = 0x7f6f78e6e000
+[00007f6f78fa00e6] mmap(0x7f6f78e70000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000)     = 0x7f6f78e70000
+[00007f6f78fa00e6] mmap(0x7f6f78e7d000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000)                = 0x7f6f78e7d000
+[00007f6f78fa00e6] mmap(0x7f6f78e7f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000)    = 0x7f6f78e7f000
+[00007f6f78f9fd8b] close(3)                                                                                             = 0
+[00007f6f78f9fec8] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC)                              = 3
+[00007f6f78f9ff88] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832)                   = 832
+[00007f6f78f9ffbe] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64)              = 784
+[00007f6f78f9ffbe] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848)              = 32
+[00007f6f78f9ffbe] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0cBR\340\305\370\2609W\242\345)q\235A\1"..., 68, 880)       = 68
+[00007f6f78f9fc99] fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...})                                               = 0
+[00007f6f78f9ffbe] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64)              = 784
+[00007f6f78f9ffbe] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848)              = 32
+[00007f6f78f9ffbe] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0cBR\340\305\370\2609W\242\345)q\235A\1"..., 68, 880)       = 68
+[00007f6f78fa00e6] mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                      = 0x7f6f78c7c000
+[00007f6f78fa019b] mprotect(0x7f6f78ca1000, 1847296, PROT_NONE)                                                         = 0
+[00007f6f78fa00e6] mmap(0x7f6f78ca1000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000)  = 0x7f6f78ca1000
+[00007f6f78fa00e6] mmap(0x7f6f78e19000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000)            = 0x7f6f78e19000
+[00007f6f78fa00e6] mmap(0x7f6f78e64000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000)  = 0x7f6f78e64000
+[00007f6f78fa00e6] mmap(0x7f6f78e6a000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)        = 0x7f6f78e6a000
+[00007f6f78f9fd8b] close(3)                                                                                             = 0
+[00007f6f78f9fec8] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC)                        = 3
+[00007f6f78f9ff88] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\201\0\0\0\0\0\0"..., 832)                = 832
+[00007f6f78f9ffbe] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0w\\\273\377\370\24Ef`xg\200\260\263\264\0"..., 68, 824)    = 68
+[00007f6f78f9fc99] fstat(3, {st_mode=S_IFREG|0755, st_size=157224, ...})                                                = 0
+[00007f6f78f9ffbe] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0w\\\273\377\370\24Ef`xg\200\260\263\264\0"..., 68, 824)    = 68
+[00007f6f78fa00e6] mmap(NULL, 140408, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0)                                       = 0x7f6f78c59000
+[00007f6f78fa00e6] mmap(0x7f6f78c60000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000)     = 0x7f6f78c60000
+[00007f6f78fa00e6] mmap(0x7f6f78c71000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000)              = 0x7f6f78c71000
+[00007f6f78fa00e6] mmap(0x7f6f78c76000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000)    = 0x7f6f78c76000
+[00007f6f78fa00e6] mmap(0x7f6f78c78000, 13432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0)        = 0x7f6f78c78000
+[00007f6f78f9fd8b] close(3)                                                                                             = 0
+[00007f6f78fa00e6] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                             = 0x7f6f78c57000
+[00007f6f78fa00e6] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0)                            = 0x7f6f78c54000
+[00007f6f78f82cc0] arch_prctl(ARCH_SET_FS, 0x7f6f78c54740)                                                              = 0
+[00007f6f78fa019b] mprotect(0x7f6f78e64000, 12288, PROT_READ)                                                           = 0
+[00007f6f78fa019b] mprotect(0x7f6f78c76000, 4096, PROT_READ)                                                            = 0
+[00007f6f78fa019b] mprotect(0x7f6f78e7f000, 4096, PROT_READ)                                                            = 0
+[00007f6f78fa019b] mprotect(0x7f6f78ea6000, 4096, PROT_READ)                                                            = 0
+[00007f6f78fa019b] mprotect(0x7f6f78f4f000, 4096, PROT_READ)                                                            = 0
+[00007f6f78fa019b] mprotect(0x7f6f78f6b000, 4096, PROT_READ)                                                            = 0
+[00007f6f78fa019b] mprotect(0x555762fa5000, 8192, PROT_READ)                                                            = 0
+[00007f6f78fa019b] mprotect(0x7f6f78fae000, 4096, PROT_READ)                                                            = 0
+[00007f6f78fa016b] munmap(0x7f6f78f6f000, 71809)                                                                        = 0
+[00007f6f78c60e09] set_tid_address(0x7f6f78c54a10)                                                                      = 5275
+[00007f6f78c60e56] set_robust_list(0x7f6f78c54a20, 24)                                                                  = 0
+[00007f6f78c6e496] rt_sigaction(SIGRTMIN, {sa_handler=0x7f6f78c60bf0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f6f78c6e3c0}, NULL, 8) = 0
+[00007f6f78c6e496] rt_sigaction(SIGRT_1, {sa_handler=0x7f6f78c60c90, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f6f78c6e3c0}, NULL, 8) = 0
+[00007f6f78c60f24] rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8)                                                   = 0
+[00007f6f78d92d44] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY})                     = 0
+[00007f6f78d9325b] brk(NULL)                                                                                            = 0x555763b5f000
+[00007f6f78d9325b] brk(0x555763b80000)                                                                                  = 0x555763b80000
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC)                               = 3
+[00007f6f78d8c4f9] fstat(3, {st_mode=S_IFREG|0644, st_size=5703728, ...})                                               = 0
+[00007f6f78d978b6] mmap(NULL, 5703728, PROT_READ, MAP_PRIVATE, 3, 0)                                                    = 0x7f6f786e3000
+[00007f6f78d9231b] close(3)                                                                                             = 0
+[00007f6f78d929ea] ioctl(1, TCGETS, {B38400 opost isig icanon echo ...})                                                = 0
+[00007f6f78d8cb3b] umask(022)                                                                                           = 022
+[00007f6f78d8cd1b] openat(AT_FDCWD, "../tinyirc_1%3a1.1.dfsg.1-3build2_amd64.deb", O_RDONLY)                            = 3
+[00007f6f78d8c4f9] fstat(3, {st_mode=S_IFREG|0644, st_size=30396, ...})                                                 = 0
+[00007f6f78d8cfb2] read(3, "!<arch>\n", 8)                                                                              = 8
+[00007f6f78d8cfb2] read(3, "debian-binary   1525357179  0   "..., 60)                                                   = 60
+[00007f6f78d8cfb2] read(3, "2.0\n", 4)                                                                                  = 4
+[00007f6f78d8cfb2] read(3, "control.tar.xz  1525357179  0   "..., 60)                                                   = 60
+[00007f6f78d8d90b] pipe([4, 5])                                                                                         = 0
+[00007f6f78d61f2f] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f6f78c54a10) = 5276
+[00007f6f78d8d7f7] close(5)                                                                                             = 0
+[00007f6f78d8d90b] pipe([5, 6])                                                                                         = 0
+[00007f6f78d61f2f] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f6f78c54a10) = 5277
+[00007f6f78d8d7f7] close(4)                                                                                             = 0
+[00007f6f78d8d7f7] close(3)                                                                                             = 0
+[00007f6f78d8d7f7] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5276, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[00007f6f78d8d7f7] close(6)                                                                                             = 0
+[00007f6f78d61f2f] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f6f78c54a10) = 5278
+[00007f6f78d8d7f7] close(5)                                                                                             = 0
+[00007f6f78d61c2a] wait4(5278, 0x7ffdbc0aabf4, 0, NULL)                                                                 = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+[00007f6f78d61c2a] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5277, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[00007f6f78d61c2a] wait4(5278, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL)                                        = 5278
+[00007f6f78d61c2a] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5278, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC)                               = 3
+[00007f6f78d8c4f9] fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...})                                                  = 0
+[00007f6f78d925d8] read(3, "# Locale name alias data base.\n#"..., 4096)                                                = 2996
+[00007f6f78d925d8] read(3, "", 4096)                                                                                    = 0
+[00007f6f78d9231b] close(3)                                                                                             = 0
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale/en_US.UTF-8/LC_MESSAGES/dpkg.mo", O_RDONLY)                      = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale/en_US.utf8/LC_MESSAGES/dpkg.mo", O_RDONLY)                       = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/dpkg.mo", O_RDONLY)                            = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale/en.UTF-8/LC_MESSAGES/dpkg.mo", O_RDONLY)                         = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale/en.utf8/LC_MESSAGES/dpkg.mo", O_RDONLY)                          = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/dpkg.mo", O_RDONLY)                               = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/dpkg.mo", O_RDONLY)             = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/dpkg.mo", O_RDONLY)              = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/dpkg.mo", O_RDONLY)                   = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/dpkg.mo", O_RDONLY)                = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/dpkg.mo", O_RDONLY)                 = -1 ENOENT (No such file or directory)
+[00007f6f78d924cc] openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/dpkg.mo", O_RDONLY)                      = -1 ENOENT (No such file or directory)
+[00007f6f78d61c2a] wait4(5277, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL)                                        = 5277
+[00007f6f78d61c2a] wait4(5276, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL)                                        = 5276
+[00007f6f78d62136] exit_group(0)                                                                                        = ?
+[????????????????] +++ exited with 0 +++
