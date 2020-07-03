@@ -68,13 +68,14 @@
 	- F_TEST: ritorna 0 se la sezione indicata è libera da lock o bloccata dal processo corrente, -1 se un altro processo detiene il lock (errno settato)
 	len indica la lunghezza desiderata a partire dalla posizione corrente nel file, se 0 arriva fino alla fine del file
 
+
 **In summary**: there are only 2 effectively distinct ways to operate with locks in Linux:
- 	- one is using **flock**
-	- the other using **fcntl**, since **lockf** is just a convenience wapper built on top of it
+- one is using **flock**
+- the other using **fcntl**, since **lockf** is just a convenience wapper built on top of it
 
 **flock** itself could be implemented using only **fcntl** locking APIs since the capabilities of the former are
 a subset of the ones of the latter:
-	- a *shared lock* can be obtained by applying a *read* one with **fcntl**
-	- an *exclusive lock* on the other hand corresponds to a *write lock*
-	- removal of a lock is a common functionality
-	- **flock** applies locks to ENTIRE files, and **fcntl** locks can easily do that as well
+- a *shared lock* can be obtained by applying a *read* one with **fcntl**
+- an *exclusive lock* on the other hand corresponds to a *write lock*
+- removal of a lock is a common functionality
+- **flock** applies locks to ENTIRE files, and **fcntl** locks can easily do that as well
