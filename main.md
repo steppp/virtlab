@@ -1,5 +1,7 @@
 # Main project file
 
+**TODO: TRANSLATE ALL TO ENGLISH PLEASE AND THANK YOU**
+
 ## Analyze all locking system calls provided by Linux
 
 ### SC per Effettuare Locking
