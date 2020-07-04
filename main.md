@@ -30,7 +30,7 @@
 	- if a process obtains multiple _file descriptors_ for the same file using *open* (or similar), these are treated independently: applying a lock on different _fd_s that refers to the same file will yield an error after the first successful call
 	- the lock type on a file can be **change**, although it's **not an atomical operation**
 	- a process can have a maximum of one lock on a single file; subsequent calls can cause the **change of the lock type**
-	- locks applied by **flock** are preserved after an **execve**
+	- locks applied by **flock** are preserved after an **execve** or **fork**
 
 - **fcntl(_int fd_, _int cmd_, _struct flock *lock_)**: creates, removes, or retrieves information on a lock which applies to parts of a file, specified by _fd_
 	
@@ -54,16 +54,15 @@
 	- a file should be opened in write mode to apply *write locks*, in read mode for *read locks*
 	- there is **deadlock** detection when locks are placed using **F_SETLKW**
 	- locks are automatically released when a process ends
-	- locks applied from **fcntl** are preserved after an *execve*, but not across a *fork*
+	- locks applied from **fcntl** are preserved after an **execve**, but not across a **fork**
 	- locks are tied to the process, and this could have undesired consequences: if a process closes a _fd_, every open lock that process acquired on the _fd_'s pointed file are released; in addition, every thread in a process shares the same locks; to solve such problems **open file description** locks have been created
 	- **OFD** behaves basically as the normal ones
 	- the names tells that they are not tied to the process that acquired them, but instead they are **tied to the file descriptor** used to acquire the lock, similar to **flock**
-	- they are inherited from childs after a *fork* or a *clone*, and they are automatically realeased afer the last *open file description* is closed
+	- they are inherited from childs after a **fork** or a **clone**, and they are automatically realeased afer the last *open file description* is closed
 	- traditional and *OFD* locks can be in conflict
 	- insted, locks applied to the same _fd_ are compatible, and it's valid what has been said for traditional locks
 	- *OFD* locks acquired from different _fd_s can conflict, so they can be used to sync different threads of the same process, if each one **open**s its own _fd_ on the same file
 	- the *l_pid* field of **struct flock** **MUST** be set to 0
-	- il campo *l_pid* della struttura **flock** deve essere posto a 0
 	- *OFD* locks management commands are very similar to the traditional counterpart: **F_OFD_SETLK**, **F_OFD_SETLKW**, **F_OFD_GETLK**
 	- there is no **deadlock** detection using this method
 
