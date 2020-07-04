@@ -6,13 +6,13 @@
 
 - **flock(_int fd_, _int operation_)**: create or remove an advisory lock for the entire file pointed to by _fd_
 
-possible values for _operation_ are:
-
+	possible values for _operation_ are:
+	
 	- LOCK_SH: applies a shared lock
 	- LOCK_EX: applies an exclusive lock
 	- LOCK_UN: removes the lock for the specified _fd_
 	
-**flock** peculiarities:
+	**flock** peculiarities:
 
 	- **BLOCKING** call, if performed on a _fd_ which has an incompatible lock (fcntl) or has an _exclusive lock_
 	- to avoid blocking the execution, _operation_ can be OR'ed with **LOCK_NB**; doing this the execution doesn't stop in any case, and if it should have been, the call returns an **EWOULDBLOCK** error
@@ -25,21 +25,21 @@ possible values for _operation_ are:
 
 - **fcntl(_int fd_, _int cmd_, _struct flock *lock_)**: creates, removes, or retrieves information on a lock which applies to parts of a file, specified by _fd_
 	
-possible values for _cmd_ are:
+	possible values for _cmd_ are:
 
 	- F_SETLK: applies the lock, if one already exists for the desired region, the call returns -1 and _errno_ is set accordingly
 	- F_SETLKW: applies the lock, entering a **waiting state** if one already exists for the specified region
 	- F_GETLK: retrieves information on locks already applied on parts of a file (see man fcntl -> Advisory record locking)
 	
-the _struct flock_ pointer contains information on the lock that is about to be applied (or is loaded with infotmation about a particular lock following an **F_GETLK**)
-and is made of the following fields:
+	the _struct flock_ pointer contains information on the lock that is about to be applied (or is loaded with infotmation about a particular lock following an **F_GETLK**)
+	and is made of the following fields:
 
 	- short l_type: lock type (F_RDLCK - read lock, F_WRLCK - write lock, F_UNLCK - unlock)
 	- short l_whence: *l_start* starting point (SEEK_SET - file start, SEEK_CUR - current position, SEEK_END - file end)
 	- off_t l_start: starting offset of the lock
 	- off_t l_len: lock length, if = 0 the **entire file is considered, no matter on how much it will grow**; can be < 0 if *l_whence* = **SEEK_CUR** or **SEEK_END**
 	
-**fcntl** peculiarities:
+	**fcntl** peculiarities:
 
 	- a process can only acquire a single lock on a specified file region; if another lock request is performed, the lock is converted to the new type (this could lead to a split, shrink or coalescence of regions)
 	- a file should be opened in write mode to apply *write locks*, in read mode for *read locks*
@@ -60,13 +60,13 @@ and is made of the following fields:
 
 - **lockf(_int fd_, _int cmd_, _off_t len_)**: INTERFACE BUILT ON TOP OF **fcntl**
 	
-possible values for _cmd_ are:
+	possible values for _cmd_ are:
 
 	- F_LOCK: applies an exclusive lock on the specified region of the file, entering a waiting state if there that region is already locked
 	- F_TLOCK: **non-blocking** version of the above, returning an error instead of waiting
 	- F_ULOCK: release a lock on the specified file region (that could cause splitting/... if only a part of it is released)
 	- F_TEST: returns 0 if the region isn't locked or if it is locked by the current process, -1 if another process owns the lock (_errno_ set)
-_len_ is used to tell how many bytes the operation should involve, if 0 the entire file is used
+	_len_ is used to tell how many bytes the operation should involve, if 0 the entire file is used
 
 
 **In summary**: there are only 2 effectively distinct ways to operate with locks in Linux:
