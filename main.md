@@ -4,14 +4,14 @@
 
 **THIS PROJECT CONSISTS IN:**
 1. studying the different file locking APIs that are provided by the OS and undestand how they work and relate to each other;
-2. check if and how a unified version of such APIs can be defined in order to minimize the set of SCs tha the modules should implement;
-3. find the right level to do this work
+2. checking if and how a unified version of such APIs can be defined in order to minimize the set of SCs tha the modules should implement;
+3. finding the right level to do this work
 	- **core**: slows down execution even when not necessary (?)
 	- **module**: every module is forced to implement this functionality (?)
 	- **submodule**: allows to provide a unified experience along different users (intended as programs) that use resources without using **UMVU** as intermediary (?)
-4. propose an implementation based on the decisions taken in previous steps
+4. proposing an implementation based on the decisions taken in previous steps
 
-## Analyze all locking SCs provided by Linux
+## 1 - Analyze all locking SCs provided by Linux
 
 - **flock(_int fd_, _int operation_)**: create or remove an advisory lock for the entire file pointed to by _fd_
 
@@ -82,10 +82,20 @@
 - one is using **flock**
 - the other using **fcntl**, since **lockf** is just a convenience wapper built on top of it
 
-**flock** itself could be implemented using only **fcntl** locking APIs since the capabilities of the former are
+## 2 - Design (if possible) a unified version of locking APIs
+
+It seems that **flock** itself could be implemented without many problems using only **fcntl** locking APIs since the capabilities of the former are
 a subset of the ones of the latter:
 
 - a *shared lock* can be obtained by applying a *read* one with **fcntl**
 - an *exclusive lock* on the other hand corresponds to a *write lock*
 - removal of a lock is a common functionality
 - **flock** applies locks to ENTIRE files, and **fcntl** locks can easily do that as well
+
+Where to pay attention:
+
+- different behavior on **execve**, **fork** and **dup**
+- **OFD** locks have some major differences with plain **fcntl** locks, and they are more similar to **flock**
+- understand precisely how **fcntl** behaves when managing locks on etire file, and how this differs from **flock**
+- interaction between different types of locks - is making them compatible safe or has incompatibility to be kept?
+- differences when locks involve different threads
