@@ -1,72 +1,66 @@
 # Main project file
 
-**TODO: TRANSLATE ALL TO ENGLISH PLEASE AND THANK YOU**
-
 ## Analyze all locking system calls provided by Linux
 
-### SC per Effettuare Locking
+### Locking SCs
 
-- **flock(_int fd_, _int operation_)**: crea o rimuove un advisory lock per l'intero file indicato da _fd_
+- **flock(_int fd_, _int operation_)**: create or remove an advisory lock for the entire file pointed to by _fd_
 
-	i possibili valori per operation sono:
-	- LOCK_SH: applica uno shared lock (che può essere condiviso con altri)
-	- LOCK_EX: applica un exclusive lock
-	- LOCK_UN: rimuove il lock sul file specificato
+	possible values for _operation_ are:
+	- LOCK_SH: applies a shared lock
+	- LOCK_EX: applies an exclusive lock
+	- LOCK_UN: removes the lock for the specified _fd_
 	
-	particolarita' di flock:
-	- chiamata **BLOCCANTE** se effettuata su un *fd* con un lock incompatibile o su cui e' gia' presente un lock esclusivo
-	- per non bloccare l'esecuzione, ad *operation* puo' essere eseguito un OR bit a bit con il flag **LOCK_NB**; in tal caso l'esecuzione non viene bloccata in nessun caso, e se invece avrebbe dovuto esserlo, la chiamata restituisce un errore **EWOULDBLOCK**
-	- in Linux, **flock** e **fcntl** hanno una semantica diversa in relazione a fork e dup, e non dovrebbero essere compatibili
-	- via NFS invece, i due tipi di lock possono interagire in quanto, non essendo **flock** supportata attraverso questo tipo di mount, viene usato **fcntl** al suo posto
-	- se un processo usa open (o simili) per ottenere file descriptor multipli per lo stesso file, questi vengono trattati indipendentemente, ovvero applicare un lock a fd diversi ma che si rifanno allo stesso file portera' ad un errore dopo la prima chiamata che termina con successo
-	- il tipo di lock su un file puo' essere cambiato, ma questa NON E' UN'OPERAZIONE ATOMICA
-	- un processo ha sempre uno ed un solo tipo di lock su un determinato file; chiamate successive causano il cambiamento del tipo di lock
-	- i lock applicati da **flock** sono preservati dopo una **execve**
+**flock** peculiarities:
+	- **BLOCKING** call, if performed on a _fd_ which has an incompatible lock (fcntl) or has an _exclusive lock_
+	- to avoid blocking the execution, _operation_ can be OR'ed with **LOCK_NB**; doing this the execution doesn't stop in any case, and if it should have been, the call returns an **EWOULDBLOCK** error
+	- in Linux, **flock** and **fcntl** have a different semantic in regards to *fork* and *dup*, and they shouldn't be compatible
+	- when working with locks on a *NFS* fs, the two lock types can interact since **flock** is not supported in suche filesystems so **fcntl** is used instead
+	- if a process obtains multiple _file descriptors_ for the same file using *open* (or similar), these are treated independently: applying a lock on different _fd_s that refers to the same file will yield an error after the first successful call
+	- the lock type on a file can be **change**, although it's **not an atomical operation**
+	- a process can have a maximum of one lock on a single file; subsequent calls can cause the **change of the lock type**
+	- locks applied by **flock** are preserved after an **execve**
 
-- **fcntl(_int fd_, _int cmd_, _struct flock *lock_)**: crea, rimuove, o ottiene informazioni riguardo ad un lock
-		per parti del file indicato da _fd_
+- **fcntl(_int fd_, _int cmd_, _struct flock *lock_)**: creates, removes, or retrieves information on a lock which applies to parts of a file, specified by _fd_
 	
-	i possibili valori per cmd sono:
-	- F_SETLK: applica il lock, se ne esiste già uno per la regione di file specificata, la call ritorna -1
-			ed errno viene settato adeguatamente
-	- F_SETLKW: applica il lock, mettendosi in attesa se ne esiste già uno per la regione specificata
-	- F_GETLK: ottiene informazioni su eventuali lock di parti di file (vedi man fcntl -> Advisory record locking)
+possible values for _cmd_ are:
+	- F_SETLK: applies the lock, if one already exists for the desired region, the call returns -1 and _errno_ is set accordingly
+	- F_SETLKW: applies the lock, entering a **waiting state** if one already exists for the specified region
+	- F_GETLK: retrieves information on locks already applied on parts of a file (see man fcntl -> Advisory record locking)
 	
-	il puntatore struct flock contiene le informazioni sul lock da impostare (o viene riempito dalla sc con i dati corretti
-			in seguito ad una F_GETLK, e contiene i seguenti campi:
-	- short l_type: tipo di lock (F_RDLCK - read lock, F_WRLCK - write lock, F_UNLCK - unlock)
-	- short l_whence: punto di partenza di l_start (SEEK_SET - inizio del file, SEEK_CUR - posizione corrente, SEEK_END - fine del file)
-	- off_t l_start: offset inziale per il lock
-	- off_t l_len: lunghezza per il lock, se = 0 allora vengono considerati tutti i byte da l_start alla fine del file, può essere negativa se
-			l_whence = SEEK_CUR o SEEK_END _
+the _struct flock_ pointer contains information on the lock that is about to be applied (or is loaded with infotmation about a particular lock following an **F_GETLK**)
+and is made of the following fields:
+	- short l_type: lock type (F_RDLCK - read lock, F_WRLCK - write lock, F_UNLCK - unlock)
+	- short l_whence: *l_start* starting point (SEEK_SET - file start, SEEK_CUR - current position, SEEK_END - file end)
+	- off_t l_start: starting offset of the lock
+	- off_t l_len: lock length, if = 0 the **entire file is considered, no matter on how much it will grow**; can be < 0 if *l_whence* = **SEEK_CUR** or **SEEK_END**
 	
-	particolarita' di fcntl:
-	- un processo puo' avere un solo lock su una determinata regione di un file; se si tenta di applicarne un secondo, il lock viene convertito nel nuovo tipo (questo potrebbe causare una separazione, rimpicciolimento e/o unione di due regioni)
-	- per poter applicare *write locks*, fd deve essere aperto in scrittura, in lettura per *read locks*
-	- vengono rilevati **deadlock** quando si piazzano dei lock usando **F_SETLKW**
-	- i lock vengono automaticamente rilasciati quando un processo termina 
-	- per poter applicare *write locks*, fd deve essere aperto in scrittura, in lettura per *read locks*
-	- vengono rilevati **deadlock** quando si piazzano dei lock usando **F_SETLKW**
-	- i lock generati da **fcntl** non vengono preservati quando si fa una *fork*, ma permangono con una *execve*
-	- i lock sono associati al processo, e cio' ha spiacevoli conseguenze: se un processo chiude un fd, tutti i lock di quel processo sul file a cui si riferiva il file descriptor vengono rilasciati e tutti i thread in un processo condividono gli stessi lock; per risolvere questi problemi esistono gli **open file description locks**
-	- gli **OFD** locks si comportano sotto molti punti di vista come quelli normali
-	- questo significa che invece di essere associati al processo che li ha creati, sono *associati al file descriptor* usato per creare il lock, in un modo simile a **flock**
-	- sono quindi ereditati dai figli creati in seguito ad una fork o clone, e vengono automaticamente rilasciati alla chiusura dell'ultimo open file description
-	- i lock possono essere in conflitto anche quando i lock interessati sono delle due diverse tipologie (tradizionali vs. OFD)
-	- i lock applicati sullo stesso fd sono invece compatibili, e vale quanto detto per i lock tradizionali
-	- gli OFD locks acquisiti tramite fd diversi possono essere in conflitto, e quindi possono essere usati per sincronizzare thread diversi dello stesso processo, eseguendo su ognuno una **open** sullo stesso file
+**fcntl** peculiarities:
+	- a process can only acquire a single lock on a specified file region; if another lock request is performed, the lock is converted to the new type (this could lead to a split, shrink or coalescence of regions)
+	- a file should be opened in write mode to apply *write locks*, in read mode for *read locks*
+	- there is **deadlock** detection when locks are placed using **F_SETLKW**
+	- locks are automatically released when a process ends
+	- locks applied from **fcntl** are preserved after an *execve*, but not across a *fork*
+	- locks are tied to the process, and this could have undesired consequences: if a process closes a _fd_, every open lock that process acquired on the _fd_'s pointed file are released; in addition, every thread in a process shares the same locks; to solve such problems **open file description** locks have been created
+	- **OFD** behaves basically as the normal ones
+	- the names tells that they are not tied to the process that acquired them, but instead they are **tied to the file descriptor** used to acquire the lock, similar to **flock**
+	- they are inherited from childs after a *fork* or a *clone*, and they are automatically realeased afer the last *open file description* is closed
+	- traditional and *OFD* locks can be in conflict
+	- insted, locks applied to the same _fd_ are compatible, and it's valid what has been said for traditional locks
+	- *OFD* locks acquired from different _fd_s can conflict, so they can be used to sync different threads of the same process, if each one **open**s its own _fd_ on the same file
+	- the *l_pid* field of **struct flock** **MUST** be set to 0
 	- il campo *l_pid* della struttura **flock** deve essere posto a 0
-	- i comandi per gestire gli OFD locks sono analoghi alla controparte tradizionale: **F_OFD_SETLK**, **F_OFD_SETLKW**, **F_OFD_GETLK**
-	- questa variante di record locing non implementa un controllo su eventuali *deadlock*
+	- *OFD* locks management commands are very similar to the traditional counterpart: **F_OFD_SETLK**, **F_OFD_SETLKW**, **F_OFD_GETLK**
+	- there is no **deadlock** detection using this method
 
-- **lockf(_int fd_, _int cmd_, _off_t len_)**: INTERFACCIA SOPRA A **fcntl**
+- **lockf(_int fd_, _int cmd_, _off_t len_)**: INTERFACE BUILT ON TOP OF **fcntl**
 	
-	i possibili valori di cmd sono:
-	- F_LOCK: applica un lock esclusivo alla regione specificata del file, mettendosi in attesa del rilascio di eventuali lock già esistenti
-	- F_TLOCK: some sopra, ma ritorn un errore se esistono già dei lock sul file
-	- F_ULOCK: rilascia il lock sulla regione specificata del file (una zona di lock può essere divisa in due se ne viene rilasciata solamente una parte)
-	- F_TEST: ritorna 0 se la sezione indicata è libera da lock o bloccata dal processo corrente, -1 se un altro processo detiene il lock (errno settato)
-	len indica la lunghezza desiderata a partire dalla posizione corrente nel file, se 0 arriva fino alla fine del file
+possible values for _cmd_ are:
+	- F_LOCK: applies an exclusive lock on the specified region of the file, entering a waiting state if there that region is already locked
+	- F_TLOCK: **non-blocking** version of the above, returning an error instead of waiting
+	- F_ULOCK: release a lock on the specified file region (that could cause splitting/... if only a part of it is released)
+	- F_TEST: returns 0 if the region isn't locked or if it is locked by the current process, -1 if another process owns the lock (_errno_ set)
+_len_ is used to tell how many bytes the operation should involve, if 0 the entire file is used
 
 
 **In summary**: there are only 2 effectively distinct ways to operate with locks in Linux:
