@@ -99,3 +99,10 @@ Where to pay attention:
 - understand precisely how **fcntl** behaves when managing locks on etire file, and how this differs from **flock**
 - interaction between different types of locks - is making them compatible safe or has incompatibility to be kept?
 - differences when locks involve different threads
+
+lock API | flock | fcntl | fcntl (OFD)
+--- | --- | --- | ---
+granularity | entire file | byte | same as non-OFD
+file already locked call behaviour | blocking, non blocking if _cmd_ is OR'ed with **LOCK_NB** | non-blocking with **F_SETLK**, blocking with **F_SETLKW** | same as non-OFD
+deadlock detection | NO | YES | NO
+
