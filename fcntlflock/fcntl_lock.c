@@ -44,18 +44,19 @@ void open_file(char* path, int mode) {
 	printf("Successfully opened file %s, fd: %d\n", path, res);
 }
 
+void init() {
+	for (int i = 0; i < LI_MAX_SIZE; i++) {
+		opened_locks[i] = (struct lock_info) { .fd=0, .fd_o_mode=0, .path=NULL, .lock_params=NULL };
+	}
+}
+
 void deinit() {
 	for (int i = 0; i < LI_MAX_SIZE
 			&& opened_locks[i].path != NULL
 			&& opened_locks[i].lock_params != NULL; i++) {
 		unlink(opened_locks[i].path);
 		free(opened_locks[i].lock_params);
-	}
-}
-
-void init() {
-	for (int i = 0; i < LI_MAX_SIZE; i++) {
-		opened_locks[i] = (struct lock_info) { .fd=0, .fd_o_mode=0, .path=NULL, .lock_params=NULL };
+		opened_locks[i].lock_params = NULL;
 	}
 }
 
@@ -77,6 +78,15 @@ void apply_lock(int index) {
 			*lockinfo = (struct flock) { F_RDLCK, SEEK_SET, 5, 7 };
 			cmd = F_SETLK;
 			break;
+		case 3:
+			opened_locks[index] = opened_locks[2];
+			
+			// avoid double-freeing this pointer if the fcntl call fails
+			opened_locks[index].lock_params = NULL;	
+
+			*lockinfo = (struct flock) { F_WRLCK, SEEK_SET, 2, 9 };
+			cmd = F_SETLK;
+			break;
 		default:
 			break;
 	}
@@ -84,7 +94,11 @@ void apply_lock(int index) {
 	// apply the lock
 	int res = fcntl(opened_locks[index].fd, cmd, lockinfo);
 	if (res < 0) {
-		printf("Cannot apply lock on index %d\n", index);
+		printf("\n\t-------------------------------\n");
+		printf("\t Cannot apply lock on index %d\n", index);
+		printf("\t-------------------------------\n\n");
+
+		free(lockinfo);
 		return;
 	}
 
@@ -111,6 +125,9 @@ void populate_file(int fd) {
 void flush_stdin() {
 	char c;
 
+	// consume all characters in stdin
+	// not doing so will cause stdin unread characters to be read
+	// from the next fgets call, that will immediately return
 	while ((c = getchar()) != '\n' && c != EOF) ;
 }
 
@@ -136,5 +153,11 @@ int main(int argc, char **argv) {
 	flush_stdin();
 	apply_lock(2);
 
+	fgets(NULL, 0, stdin);
+	flush_stdin();
+	apply_lock(3);
+
+	fgets(NULL, 0, stdin);
+	flush_stdin();
 	deinit();
 }
