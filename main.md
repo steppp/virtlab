@@ -96,7 +96,7 @@ Where to pay attention:
 
 - different behavior on **execve**, **fork** and **dup**
 - **OFD** locks have some major differences with plain **fcntl** locks, and they are more similar to **flock**
-- understand precisely how **fcntl** behaves when managing locks on etire file, and how this differs from **flock**
+- understand precisely how **fcntl** behaves when managing locks on entire file, and how this differs from **flock**
 - interaction between different types of locks - is making them compatible safe or has incompatibility to be kept?
 - differences when locks involve different threads
 
@@ -104,5 +104,7 @@ lock API | flock | fcntl | fcntl (OFD)
 --- | --- | --- | ---
 granularity | entire file | byte | same as non-OFD
 file already locked call behaviour | blocking, non blocking if _cmd_ is OR'ed with **LOCK_NB** | non-blocking with **F_SETLK**, blocking with **F_SETLKW** | same as non-OFD
-deadlock detection | NO | YES | NO
-
+deadlock detection | NO | YES (with **F_SETLKW** | NO
+preserved after **execve** | YES | YES | ?
+preserved after fork | YES | NO | YES
+locks applied to different _fd_ independancy | indpendant only if _fd_ is obtained with multiple **open** or similar | **extremely dependant**: closing a fd will cause _ALL_ of the process' locks to be released | independant if _fd_ is actually a different OFD, duplicate _fd_ (**fork**/**dup**) can be used interchangeably

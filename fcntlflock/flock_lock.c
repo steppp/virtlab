@@ -58,6 +58,19 @@ void init() {
 	}
 }
 
+const char* getOpStrFromInt(int cmd) {
+	switch (cmd) {
+		case LOCK_SH:
+			return "LOCK_SH";
+		case LOCK_EX:
+			return "LOCK_EX";
+		case LOCK_UN:
+			return "LOCK_UN";
+		default:
+			return "unknown";
+	}
+}
+
 void apply_lock(int index) {
 	int cmd;
 	
@@ -92,7 +105,7 @@ void apply_lock(int index) {
 
 	printf("\n\t-------------------------------\n");
 	printf("\t Lock applied to file %s, fd: %d\n", flinfo->path, flinfo->fd);
-	printf("\t operation: %d\n", cmd);
+	printf("\t operation: %s\n", getOpStrFromInt(cmd));
 	printf("\t-------------------------------\n\n");
 }
 

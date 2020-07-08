@@ -25,23 +25,53 @@ int get_first_free_lockinfo_index() {
 	return i < LI_MAX_SIZE ? i : -1;
 }
 
-void open_file(char* path, int mode) {
+int push_to_locks_array(struct lock_info linfo) {
+	int i = get_first_free_lockinfo_index();
+	if (i == -1) {
+		printf("No space left\n");
+		return -1;
+	}
+
+	opened_locks[i] = linfo;
+	return i;
+}
+
+int open_file(char* path, int mode) {
 	int res = open(path, O_CREAT | mode, S_IRUSR | S_IWUSR);
 
 	if (res < 0) {
 		printf("Error while opening %s\n", path);
-		return;
+		return -1;
 	}
 
-	int i = get_first_free_lockinfo_index();
-	if (i == -1) {
-		printf("No space left\n");
-		return;
+	struct lock_info linfo = (struct lock_info) { .fd=res, .fd_o_mode=mode, .path=path, .lock_params=NULL };
+	int index = push_to_locks_array(linfo);
+	if (index != -1) {
+		printf("Successfully opened file %s, fd: %d\n", path, res);
+		return index;
 	}
 
-	opened_locks[i] = (struct lock_info) { .fd=res, .fd_o_mode=mode, .path=path, .lock_params=NULL };
+	return -2;
+}
 
-	printf("Successfully opened file %s, fd: %d\n", path, res);
+int duplicate(int atIndex) {
+	int newfd = dup(opened_locks[atIndex].fd);
+
+	if (newfd < 0) {
+		printf("\ndup failed\n\n");
+		return -1;
+	}
+
+	struct lock_info linfo = opened_locks[atIndex];
+	linfo.fd = newfd;
+	
+	int index = push_to_locks_array(linfo);
+	if (index != -1) {
+		printf("Successfully dup'ed fd %d, the new one is %d\n", opened_locks[atIndex].fd, newfd);
+		return index;
+	}
+
+	return -2;
 }
 
 void init() {
@@ -57,6 +87,19 @@ void deinit() {
 		unlink(opened_locks[i].path);
 		free(opened_locks[i].lock_params);
 		opened_locks[i].lock_params = NULL;
+	}
+}
+
+const char* getTypeStrFromInt(int type) {
+	switch (type) {
+		case F_RDLCK:
+			return "F_RDLCK";
+		case F_WRLCK:
+			return "F_WRLCK";
+		case F_UNLCK:
+			return "F_UNLCK";
+		default:
+			return "unknown";
 	}
 }
 
@@ -87,6 +130,10 @@ void apply_lock(int index) {
 			*lockinfo = (struct flock) { F_WRLCK, SEEK_SET, 2, 9 };
 			cmd = F_SETLK;
 			break;
+		case 4:
+			*lockinfo = (struct flock) { F_UNLCK, SEEK_SET, 0, 0 };
+			cmd = F_SETLK;
+			break;
 		default:
 			break;
 	}
@@ -98,6 +145,7 @@ void apply_lock(int index) {
 		printf("\t Cannot apply lock on index %d\n", index);
 		printf("\t-------------------------------\n\n");
 
+		// pointer not stored anywhere so it must be free'd here
 		free(lockinfo);
 		return;
 	}
@@ -108,8 +156,8 @@ void apply_lock(int index) {
 
 	printf("\n\t-------------------------------\n");
 	printf("\t Lock applied to file %s, fd: %d\n", flinfo->path, flinfo->fd);
-	printf("\t l_type: %d\n", lockinfo->l_type);
-	printf("\t l_whence: %d\n", lockinfo->l_whence);
+	printf("\t l_type: %s\n", getTypeStrFromInt(lockinfo->l_type));
+	printf("\t l_whence: %s\n", lockinfo->l_whence == SEEK_SET ? "SEEK_SET" : "SEEK_END or SEEK_CUR");
 	printf("\t l_start: %d\n", lockinfo->l_start);
 	printf("\t l_len: %d\n", lockinfo->l_len);
 	printf("\t-------------------------------\n\n");
@@ -156,6 +204,24 @@ int main(int argc, char **argv) {
 	fgets(NULL, 0, stdin);
 	flush_stdin();
 	apply_lock(3);
+
+	fgets(NULL, 0, stdin);
+	flush_stdin();
+	// get another fd for the same file
+	int index = open_file("partial_read.lock", O_RDWR);
+	// closig this fd will cause the release of all the opened locks
+	// even if it wasn't used to acquire any lock
+	close(opened_locks[index].fd);
+	printf("fd %d closed\n", opened_locks[index].fd);
+
+	fgets(NULL, 0, stdin);
+	flush_stdin();
+	// get a dup'ed fd for the element at the specified index
+	int dupindex = duplicate(0);
+	// closing this fd will cause the release of all the locks onto the
+	// file the original fd referred to
+	close(opened_locks[dupindex].fd);
+	printf("fd %d closed\n", opened_locks[dupindex].fd);
 
 	fgets(NULL, 0, stdin);
 	flush_stdin();
