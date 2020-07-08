@@ -76,7 +76,7 @@ void apply_lock(int index) {
 	
 	switch (index) {
 		case 0:
-			cmd = LOCK_SH;
+			cmd = LOCK_EX;
 			break;
 		case 1:
 			cmd = LOCK_EX;

@@ -104,7 +104,7 @@ lock API | flock | fcntl | fcntl (OFD)
 --- | --- | --- | ---
 granularity | entire file | byte | same as non-OFD
 file already locked call behaviour | blocking, non blocking if _cmd_ is OR'ed with **LOCK_NB** | non-blocking with **F_SETLK**, blocking with **F_SETLKW** | same as non-OFD
-deadlock detection | NO | YES (with **F_SETLKW** | NO
+deadlock detection | NO | YES (with **F_SETLKW**) | NO
 preserved after **execve** | YES | YES | ?
 preserved after fork | YES | NO | YES
 locks applied to different _fd_ independancy | indpendant only if _fd_ is obtained with multiple **open** or similar | **extremely dependant**: closing a fd will cause _ALL_ of the process' locks to be released | independant if _fd_ is actually a different OFD, duplicate _fd_ (**fork**/**dup**) can be used interchangeably
