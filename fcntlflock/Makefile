@@ -1,7 +1,14 @@
-all: clean fcntl_lock.c flock_lock.c
-	mkdir build
-	gcc -o build/fcntl_lock fcntl_lock.c
-	gcc -o build/flock_lock flock_lock.c
+BUILDDIR="build"
+
+all: clean builddir fcntl_lock.c flock_lock.c dlflock
+	gcc -o $(BUILDDIR)/fcntl_lock fcntl_lock.c
+	gcc -o $(BUILDDIR)/flock_lock flock_lock.c
+
+dlflock: dlflock.c
+	gcc -shared -fPIC -o build/dlflock.so dlflock.c -ldl
+
+builddir:
+	mkdir $(BUILDDIR)
 
 clean:
-	rm -rf build
+	rm -rf $(BUILDDIR)

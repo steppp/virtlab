@@ -76,10 +76,11 @@ void apply_lock(int index) {
 	
 	switch (index) {
 		case 0:
-			cmd = LOCK_EX;
+			cmd = LOCK_SH;
 			break;
 		case 1:
-			cmd = LOCK_EX;
+			// exclusive lock, non-blocking
+			cmd = LOCK_EX | LOCK_NB;
 			break;
 		case 2:
 			cmd = LOCK_SH;
