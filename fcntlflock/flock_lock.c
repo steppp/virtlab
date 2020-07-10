@@ -162,9 +162,9 @@ int main(int argc, char **argv) {
 	flush_stdin();
 	apply_lock(3);
 
-	open_file("write.lock", O_RDONLY);
 	fgets(NULL, 0, stdin);
 	flush_stdin();
+	open_file("write.lock", O_RDONLY);
 	apply_lock(4);
 
 	fgets(NULL, 0, stdin);

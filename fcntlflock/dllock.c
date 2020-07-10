@@ -8,9 +8,8 @@
 #include <stdarg.h>
 #include <stdint.h>
 
-// define the type of the original flock function to be used with dlsym
+// define the types of the original flock functions to be used with dlsym
 typedef int (*real_flock)(int, int);
-// define the type of the original fcntl function to be used with dlsym
 typedef int (*real_fcntl)(int, int, ...);
 
 // override the flock SC
@@ -35,7 +34,7 @@ int flock(int fd, int operation) {
 			fcntl_ltype = F_UNLCK;
 			break;
 
-		default:		// operation is invalid
+		default:		// operation is not valid
 			errno = EINVAL;
 			return -1;
 	}
@@ -51,6 +50,15 @@ int flock(int fd, int operation) {
 		if (errno == EACCES || errno == EAGAIN) {
 			errno = EWOULDBLOCK;
 		}
+
+		/*
+		 * TODO: flock can apply locks regardless of the open mode of the target file,
+		 * whereas fcntl locks must be applied to files which open mode match the
+		 * desired lock type (READ for READ locks, etc.).
+		 * In such cases fcntl raises an EBADF error, while flock successfully applies
+		 * the lock so the behaviour of this method should change accordingly (assuming
+		 * it is possible).
+		 */
 
 		return -1;
 	}
@@ -69,7 +77,7 @@ int fcntl(int fd, int cmd, ...) {
 	uint64_t *uint_argp;
 
 	// get the actual fcntl function address
-	real_fcntl r_fcntl = (real_fcntl) dlsym(RTLD_NEXT, "fcntl");
+	real_fcntl r_fcntl = dlsym(RTLD_NEXT, "fcntl");
 	va_start(ap, cmd);
 
 	switch (cmd) {
