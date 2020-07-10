@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/file.h>
+#include <errno.h>
 
 #define LI_MAX_SIZE 10
 
@@ -58,17 +59,29 @@ void init() {
 	}
 }
 
-const char* getOpStrFromInt(int cmd) {
-	switch (cmd) {
+char* getOpStrFromInt(int cmd) {
+	int noblock = cmd & LOCK_NB;
+	char *nbstr = noblock ? " | LOCK_NB" : "";
+	char *opstr;
+
+	switch (cmd & ~LOCK_NB) {
 		case LOCK_SH:
-			return "LOCK_SH";
+			opstr = "LOCK_SH";
+			break;
 		case LOCK_EX:
-			return "LOCK_EX";
+			opstr = "LOCK_EX";
+			break;
 		case LOCK_UN:
-			return "LOCK_UN";
+			opstr = "LOCK_UN";
+			break;
 		default:
 			return "unknown";
 	}
+
+	char *res = malloc(sizeof(char));
+	sprintf(res, "%s%s", opstr, nbstr);
+
+	return res;
 }
 
 void apply_lock(int index) {
@@ -89,14 +102,21 @@ void apply_lock(int index) {
 			opened_locks[index] = opened_locks[2];
 			cmd = LOCK_SH;
 			break;
+		case 4:
+			cmd = LOCK_EX | LOCK_NB;
 		default:
 			break;
 	}
 
 	// apply the lock
-	int res = flock(opened_locks[index].fd, cmd);
+	int fd = opened_locks[index].fd;
+	int res = flock(fd, cmd);
 	if (res < 0) {
-		printf("Cannot apply lock on index %d\n", index);
+		int errnocpy = errno;
+		printf("\n\t-------------------------------\n");
+		printf("\t Cannot apply lock on index %d\n\t (fd %d, error: %d)\n",
+				index, fd, errnocpy);
+		printf("\t-------------------------------\n\n");
 		return;
 	}
 
@@ -104,10 +124,13 @@ void apply_lock(int index) {
 	struct lock_info* flinfo = &(opened_locks[index]);
 	flinfo->operation = cmd;
 
+	char *optstr = getOpStrFromInt(cmd); 
 	printf("\n\t-------------------------------\n");
 	printf("\t Lock applied to file %s, fd: %d\n", flinfo->path, flinfo->fd);
-	printf("\t operation: %s\n", getOpStrFromInt(cmd));
+	printf("\t operation: %s\n", optstr);
 	printf("\t-------------------------------\n\n");
+
+	free(optstr);
 }
 
 void flush_stdin() {
@@ -138,6 +161,11 @@ int main(int argc, char **argv) {
 	fgets(NULL, 0, stdin);
 	flush_stdin();
 	apply_lock(3);
+
+	open_file("write.lock", O_RDONLY);
+	fgets(NULL, 0, stdin);
+	flush_stdin();
+	apply_lock(4);
 
 	fgets(NULL, 0, stdin);
 	flush_stdin();

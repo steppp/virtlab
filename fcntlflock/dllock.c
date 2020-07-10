@@ -17,25 +17,46 @@ typedef int (*real_fcntl)(int, int, ...);
 int flock(int fd, int operation) {
 	// check whether the call has to be BLOCKING
 	int noblock = operation & LOCK_NB; 
-	printf("%sblocking flock call\n", noblock ? "non-" : "");
+	short fcntl_ltype;
+
+	// tell fcntl whether to wait or not based on the LOCK_NB flag in operation
+	int fcntl_cmd = noblock ? F_OFD_SETLK : F_OFD_SETLKW;
 
 	switch (operation & ~LOCK_NB) {
 		case LOCK_SH:	// apply SHARED lock
-			printf("SHARED ");
+			fcntl_ltype = F_RDLCK;
 			break;
+
 		case LOCK_EX:	// apply EXCLUSIVE lock
-			printf("EXCLUSIVE ");
+			fcntl_ltype = F_WRLCK;
 			break;
+
 		case LOCK_UN:	// UNlock
-			printf("UN");
+			fcntl_ltype = F_UNLCK;
 			break;
+
 		default:		// operation is invalid
-			return EINVAL;
+			errno = EINVAL;
+			return -1;
 	}
 
-	printf("lock\n");
+	struct flock lockinfo = { fcntl_ltype, SEEK_SET, 0, 0, 0 };
+	int res = fcntl(fd, fcntl_cmd, &lockinfo);
+	int errno_backup = errno;
+	int new_errno;
 
-	return ((real_flock)dlsym(RTLD_NEXT, "flock"))(fd, operation);
+	if (res < 0) {
+		// the error generated when a call results in entering a waiting state
+		// is different between flock and fcntl
+		if (errno == EACCES || errno == EAGAIN) {
+			errno = EWOULDBLOCK;
+		}
+
+		return -1;
+	}
+
+	//return ((real_flock)dlsym(RTLD_NEXT, "flock"))(fd, operation);
+	return 0;
 }
 	
 int fcntl(int fd, int cmd, ...) {
@@ -55,9 +76,11 @@ int fcntl(int fd, int cmd, ...) {
 		case F_SETLK:
 		case F_SETLKW:
 		case F_GETLK:
+		case F_OFD_SETLK:
+		case F_OFD_SETLKW:
+		case F_OFD_GETLK:
 			// retrieve the flock struct pointer from the variadic parameter
 			lockinfo = va_arg(ap, struct flock *);
-			printf("fcntl called to manage record locking\n");
 			res = r_fcntl(fd, cmd, lockinfo);
 			break;
 
