@@ -1,3 +1,5 @@
+#define _GNU_SOURCE
+
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -18,10 +20,17 @@ int main() {
 	int fl = fcntl(dupfd, F_GETFL, 34);
 	printf("F_GETFL result: %d\n", fl);
 
-	// it seems that f_owner_ex and F_GETOWN_EX aren't defined anywhere
-	//struct f_owner_ex ownexp;
-	//fcntl(dupfd, F_GETOWN_EX, &ownexp);
-	//printf("F_GETOWN_EX result: type %d, pid %d\n", ownexp.type, ownexp.pid);
+	struct f_owner_ex setown = { F_OWNER_PID, getpid() };
+	struct f_owner_ex getown;
+
+	fcntl(dupfd, F_SETOWN_EX, &setown);
+	fcntl(dupfd, F_GETOWN_EX, &getown);
+
+	printf("F_GETOWN_EX result: type %d (%d), pid %d (%d)\n",
+			getown.type,
+			setown.type,
+			getown.pid,
+			setown.pid);
 
 	return 0;
 }
